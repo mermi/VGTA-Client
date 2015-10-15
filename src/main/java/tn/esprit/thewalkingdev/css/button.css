@@ -1,0 +1,20 @@
+.button {
+    -fx-background-color: 
+        linear-gradient(#b9bbbc, #b9bbbc),
+        linear-gradient(#d0d2d4, #d0d2d4),
+        linear-gradient(#d0d2d4, #d0d2d4),
+        linear-gradient(#b7b8b9 0%, #cbcbcb 50%, #d0d2d4 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    //-fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 5 15 5 15;
+    -fx-text-fill: black  ;
+    //-fx-text-fill : #cbcbcb
+    //-fx-font-weight: bold;
+}
+
+
+

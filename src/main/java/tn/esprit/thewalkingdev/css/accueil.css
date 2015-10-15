@@ -1,0 +1,23 @@
+.mainFxmlClass{
+	-fx-background-image:url(../../cdlr/images/fond.jpg);
+
+}
+
+.mainFxmlClass .Menubar{
+    -fx-background-color: white;
+  
+    -fx-font-weight: bold;
+}
+
+.mainFxmlClass .menu{
+   // -fx-background-color : #babff6;
+}
+
+.mainFxmlClass .menu:hover{
+    -fx-text-fill : #fcfcfc;
+    -fx-background-color : #4654f0;
+    -fx-border-radius:25px;
+}
+
+
+

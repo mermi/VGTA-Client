@@ -1,0 +1,78 @@
+.TextField
+{
+    -fx-background-color: #cccccc, white, black, white;
+    //-fx-background-radius: 0, 0, 0, 0;
+    -fx-background-radius: 30;
+    -fx-border-radius :30px;
+}
+ 
+.TextField:hover
+{
+    -fx-background-color: black, #909090, transparent, white;
+   -fx-background-radius: 30;
+    -fx-border-radius :30px;
+}
+ 
+.TextField:focused
+{
+    -fx-background-color: transparent, gray, transparent, white;
+   -fx-background-radius: 30;
+    -fx-border-radius :30px;
+    
+}
+
+.comboTextField {
+    -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 1 0 1 1;
+    -fx-padding: 1 3 1 3;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+}
+
+.comboTextField:focused {
+   -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+   -fx-background-insets: 0, 1 0 1 1;
+    
+}
+
+.datepicker {
+    -fx-background-color: white, #cccccc, white, white;
+    
+    -fx-background-radius: 5;
+    
+    -fx-border-radius :30px;
+}
+.datepicker:focused {
+    -fx-background-color: gray, gray, gray, white;
+    
+    -fx-background-radius: 5;
+    
+    -fx-border-radius :30px;
+}
+
+.datepicker:hover {
+     -fx-background-color: black, #909090, transparent, white;
+    
+    -fx-background-radius: 5;
+    
+    -fx-border-radius :30px;
+}
+
+.AnchorPane{
+    -fx-background-radius : 30;
+    -fx-border-radius: 30px;
+}
+
+.Pane {
+    -fx-background-color : transparent;
+    -fx-background-radius : 30;
+    -fx-border-radius: 30px;
+}
+
+.TextArea {
+    -fx-background-color: #cccccc, #cccccc, #cccccc, white;
+    
+    -fx-background-radius: 5;
+    
+    -fx-border-radius :30px;
+}

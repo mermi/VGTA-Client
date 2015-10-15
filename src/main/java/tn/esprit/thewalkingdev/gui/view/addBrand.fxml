@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="489.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.AddBrandController">
+   <children>
+      <ImageView fitHeight="509.0" fitWidth="864.0" layoutX="-6.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/background2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="500.0" layoutY="194.0" text="Enter the name" textFill="#d30e0e">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTF" layoutX="499.0" layoutY="253.0" promptText="name of brand" />
+      <Button fx:id="addB" layoutX="610.0" layoutY="321.0" mnemonicParsing="false" onAction="#add" text="Add" />
+      <Button fx:id="back" layoutX="499.0" layoutY="321.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>
