@@ -25,7 +25,7 @@ public class Main extends Application {
 
 	public static String DisplayEventScreen = "tn/esprit/thewalkingdev/gui/view/Main.FXML";
 	public static String DisplayEvent = "Display Event";
-	
+
 	public static Stage primaryStage;
 
 	public static Stage getPrimaryStage() {
