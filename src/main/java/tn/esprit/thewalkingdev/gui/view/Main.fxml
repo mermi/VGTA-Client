@@ -18,5 +18,6 @@
    	<Button fx:id="viewLogEvent" layoutX="-1.0" layoutY="270.0" mnemonicParsing="false" onAction="#viewEvent" opacity="0.0" prefHeight="85.0" prefWidth="227.0" />
       <Button fx:id="viewgamerr" layoutX="-1.0" layoutY="185.0" mnemonicParsing="false" onAction="#viewgamer" opacity="0.0" prefHeight="85.0" prefWidth="227.0" />
       <Hyperlink fx:id="deconnexion" layoutX="963.0" layoutY="51.0" onAction="#deco" text="Deconnexion" />
+      <Button fx:id="btnteam" layoutX="-1.0" layoutY="431.0" mnemonicParsing="false" onAction="#TeamBtnAction" opacity="0.0" prefHeight="85.0" prefWidth="227.0" />
    </children>
 </AnchorPane>

@@ -22,10 +22,14 @@ public class MainController implements ControlledScreen {
 	private Button viewLogEvent;
 	@FXML
 	private Button viewgamerr;
+	@FXML
+	private Button TeamBtn;
 	public static String DisplayEquipmentScreen = "/tn/esprit/thewalkingdev/gui/view/afficheEquipment.FXML";
 	public static String DisplayEquipment = "Add Equipment";
 	public static String DisplayEventScreen = "/tn/esprit/thewalkingdev/gui/view/AddEvent.fxml";
 	public static String DisplayEquipement = "Add Event";
+	public static String DisplayTeamsScreen = "/tn/esprit/thewalkingdev/gui/view/DisplayTeams.FXML";
+	public static String DisplayTeams = "Display Teams";
 
 	// Event Listener on Button[#viewLog].onAction
 	@FXML
@@ -71,4 +75,14 @@ public class MainController implements ControlledScreen {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}}
+	}
+	// Event Listener on Button[#TeamBtn].onAction
+		@FXML
+		public void TeamBtnAction(ActionEvent event) throws IOException {
+			pane.getChildren().clear();
+			Node node;
+			node = (Node) FXMLLoader.load(getClass().getResource(
+					"/tn/esprit/thewalkingdev/gui/view/DisplayTeams.fxml"));
+			pane.getChildren().add(node);
+		}
+}
