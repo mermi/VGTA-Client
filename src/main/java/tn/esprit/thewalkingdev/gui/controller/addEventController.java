@@ -3,6 +3,7 @@ package tn.esprit.thewalkingdev.gui.controller;
 import java.awt.TextField;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -13,6 +14,7 @@ import tn.esprit.thewalkingdev.entites.TypeEvent;
 import tn.esprit.thewalkingdev.entites.Venue;
 import tn.esprit.thewalkingdev.gui.delegates.EventCrudDelegate;
 import tn.esprit.thewalkingdev.gui.delegates.TypeEventCrudDelegate;
+import tn.esprit.thewalkingdev.gui.delegates.VenueCrudDelegate;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -31,54 +33,46 @@ public class addEventController implements Initializable, ControlledScreen {
 	@FXML
 	private Button button;
 	@FXML
-	private ComboBox<Team> ownerCB;
+	private ComboBox<String> ownerCB;
 	@FXML
 	private ChoiceBox<Boolean> streamingCB;
 	@FXML
 	private ChoiceBox<Boolean> tournamentCB;
 	@FXML
-	private ComboBox<TypeEvent> typeCB;
+	private ComboBox<String> typeCB;
 	@FXML
-	private ComboBox<Venue> venueCB;
-	@FXML
-	private ComboBox<Trophy> trophyCB;
+	private ComboBox<String> venueCB;
 
 	ScreensController ctr;
-	ObservableList<TypeEvent> listTypeEvent;
+	ObservableList<String> listTypeEvent;
 	private ObservableList<String> listVenue;
 	private ObservableList<String> listOwner;
 	private ObservableList<Boolean> listbool;
 	private List<Boolean> listB;
-	private ObservableList<String> listTrophy;
-	private List<String> listTrophyBD;
 
 	@FXML
-	private ObservableList<Boolean> streaming = FXCollections
-			.observableArrayList(false, true);
+	private ChoiceBox<Boolean> streaming;
 	@FXML
-	private ObservableList<Boolean> tournament = FXCollections
-			.observableArrayList(false, true);
+	private ChoiceBox<Boolean> tournament;
 	@FXML
 	private DatePicker dateEvent;
-	@FXML
+	
 	private TextField numberOfReservation;
-	/*@FXML
+	
 	private TextField nameEvent;
-	*/
-	@FXML
-	private ComboBox<String> trophiesB;
-	@FXML
-	private ComboBox<String> venueB;
+	
 	@FXML
 	private Button addTypeEvent;
 	@FXML 
 	private Button addVenue;
+	@FXML
+	private Button addOwner;
 
 	// Event Listener on Button[#button].onAction
 	@FXML
 	public void button(ActionEvent event) {
 		
-		//System.out.println(nameEvent.getText().toString());
+		System.out.println(nameEvent.getText().toString());
 		//EventCrudDelegate.addEvent(nameEvent.getText());
 	}
 	@FXML
@@ -115,16 +109,36 @@ public class addEventController implements Initializable, ControlledScreen {
 		}
         
 	}
+	@FXML
+	public void addOwner(ActionEvent event){
+		
+		try {
+			FXMLLoader loader = new FXMLLoader();
+	        loader.setLocation(getClass().getResource("/tn/esprit/thewalkingdev/gui/view/AddOwner.fxml"));
+	        
+				loader.load();
+				Parent P = loader.getRoot();
+		        Stage stage = new Stage();
+		        stage.setScene(new Scene(P));
+		        stage.show();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		listTypeEvent = FXCollections.observableList(TypeEventCrudDelegate
-				.doShowTypeEvent());
+		List<String> listTypeEventdb = new ArrayList<String>();
+		listTypeEventdb.addAll(TypeEventCrudDelegate.doShowTypeEventByLabel());
+		listTypeEvent = FXCollections.observableList(listTypeEventdb);
 		System.out.println(listTypeEvent.size());
 		typeCB.setItems(listTypeEvent);
-		/*listVenue = FXCollections.observableArrayList(VenueCrudDelegate
-				.doShowVenue());
-
-		venueB.setItems(listVenue);*/
+		
+		List<String> listVenuedb = new ArrayList<String>();
+		listVenuedb.addAll(VenueCrudDelegate.doShowVenueByLabel());
+		listVenue = FXCollections.observableArrayList(listTypeEventdb);
+		System.out.println(listVenue.size());
+		venueCB.setItems(listVenue);
 
 	}
 

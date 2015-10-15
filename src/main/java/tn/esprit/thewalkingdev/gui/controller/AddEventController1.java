@@ -70,6 +70,8 @@ public class AddEventController1 implements Initializable, ControlledScreen {
 	private ComboBox<String> venueB;
 	@FXML
 	private Button addTypeEvent;
+	@FXML
+	private Button addOwner;
 
 
 	// Event Listener on Button[#button].onAction
