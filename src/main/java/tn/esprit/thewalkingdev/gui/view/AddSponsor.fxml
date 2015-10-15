@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="220.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.AddSponsorController">
+   <children>
+      <Button fx:id="btAddSponsor" layoutX="127.0" layoutY="368.0" mnemonicParsing="false" onAction="#AddSponsor" text="Add Sponsor" />
+      <TextField fx:id="tfnamesponsor" layoutX="36.0" layoutY="70.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="tfnamecontactsponsor" layoutX="36.0" layoutY="143.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="tfemail" layoutX="36.0" layoutY="197.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="37.0" layoutY="45.0" text="Name Sponsor" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="112.0" text="Name Contact Sponsor" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="174.0" text="Email" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="234.0" prefHeight="17.0" prefWidth="123.0" text="Date Start of contract" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="300.0" prefHeight="17.0" prefWidth="113.0" text="Date End of contract" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+      <DatePicker fx:id="dateStart" layoutX="36.0" layoutY="266.0" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="dateEnd" layoutX="35.0" layoutY="324.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="54.0" layoutY="4.0" prefHeight="20.0" prefWidth="113.0" text="Add Sponsor" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold Italic" size="16.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
