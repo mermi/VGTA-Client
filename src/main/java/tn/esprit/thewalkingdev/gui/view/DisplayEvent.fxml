@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayEventController">
+   <children>
+      <Text fill="#dd1717" layoutX="211.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event" textAlignment="CENTER" wrappingWidth="145.13671875">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <TableView editable="true" layoutX="25.0" layoutY="82.0" prefHeight="200.0" prefWidth="526.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Event Name" />
+          <TableColumn prefWidth="75.0" text="Owner" />
+            <TableColumn prefWidth="75.0" text="Type " />
+            <TableColumn prefWidth="75.0" text="Venue" />
+            <TableColumn prefWidth="75.0" text="Streaming" />
+            <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="75.0" text="Tournament" />
+        </columns>
+      </TableView>
+      <Button fx:id="displayAddEvent" layoutX="99.0" layoutY="315.0" mnemonicParsing="false" onAction="#displayAddEvent" prefHeight="25.0" prefWidth="54.0" text="Add" />
+      <Button fx:id="displayUpdateEvent" layoutX="211.0" layoutY="315.0" mnemonicParsing="false" onAction="#displayUpdateEvent" text="Update" />
+      <Button fx:id="deleteEvent" layoutX="330.0" layoutY="315.0" mnemonicParsing="false" onAction="#deleteEvent" text="Delete" />
+   </children>
 </AnchorPane>
-

@@ -19,7 +19,7 @@ public class MainController implements ControlledScreen {
 	@FXML
 	private Button viewLog;
 	@FXML
-	private Button viewLogEvent;
+	private Button viewEvent;
 	@FXML
 	private Button viewgamerr;
 	@FXML
@@ -28,8 +28,8 @@ public class MainController implements ControlledScreen {
 	private Button viewSpon;
 	public static String DisplayEquipmentScreen = "/tn/esprit/thewalkingdev/gui/view/afficheEquipment.FXML";
 	public static String DisplayEquipment = "Add Equipment";
-	public static String DisplayEventScreen = "/tn/esprit/thewalkingdev/gui/view/AddEvent.fxml";
-	public static String DisplayEquipement = "Add Event";
+	public static String DisplayEventScreen = "/tn/esprit/thewalkingdev/gui/view/DisplayEvent.FXML";
+	public static String DisplayEquipement = "Display Event";
 	public static String DisplayTeamsScreen = "/tn/esprit/thewalkingdev/gui/view/DisplayTeams.FXML";
 	public static String DisplayTeams = "Display Teams";
 
