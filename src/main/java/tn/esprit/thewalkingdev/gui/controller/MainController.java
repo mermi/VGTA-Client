@@ -17,6 +17,8 @@ public class MainController implements ControlledScreen {
 	private Button viewLog;
 	public static String DisplayEquipmentScreen = "/tn/esprit/thewalkingdev/gui/view/afficheEquipment.FXML";
 	public static String DisplayEquipment = "Add Equipment";
+	public static String displayAllArticleScreen = "/tn/esprit/thewalkingdev/gui/view/displayAllArticles.FXML";
+	public static String addArticle = "Add Equipment";
 
 	// Event Listener on Button[#viewLog].onAction
 	@FXML
@@ -24,7 +26,7 @@ public class MainController implements ControlledScreen {
 		pane.getChildren().clear();
 		Node node;
 		node = (Node) FXMLLoader.load(getClass().getResource(
-				DisplayEquipmentScreen));
+				displayAllArticleScreen));
 		pane.getChildren().add(node);
 	}
 

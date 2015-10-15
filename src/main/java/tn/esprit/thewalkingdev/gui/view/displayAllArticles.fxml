@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.displayAllArticlesController">
+   <children>
+      <Button fx:id="b_new" layoutX="33.0" layoutY="397.0" mnemonicParsing="false" onAction="#popAdd" prefHeight="25.0" prefWidth="75.0" text="New" />
+      <Button fx:id="b_update" layoutX="118.0" layoutY="397.0" mnemonicParsing="false" onAction="#popUpdate" prefHeight="25.0" prefWidth="75.0" text="Update" />
+      <Button fx:id="b_delete" layoutX="203.0" layoutY="397.0" mnemonicParsing="false" onAction="#deleteArticle" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+      <TableView fx:id="tv_articles" layoutX="33.0" layoutY="58.0" prefHeight="320.0" prefWidth="245.0">
+        <columns>
+          <TableColumn fx:id="col_title" prefWidth="125.0" text="Title" />
+          <TableColumn fx:id="col_date" minWidth="6.0" prefWidth="118.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="b_show" layoutX="203.0" layoutY="440.0" mnemonicParsing="false" onAction="#loadArticle" prefHeight="25.0" prefWidth="75.0" text="Load" />
+      <Separator layoutX="303.0" orientation="VERTICAL" prefHeight="489.0" prefWidth="1.0" />
+      <Pane fx:id="pane_show" layoutX="329.0" layoutY="15.0" prefHeight="458.0" prefWidth="463.0" style="-fx-border-color: white;">
+         <children>
+            <ImageView fx:id="id_img" fitHeight="67.0" fitWidth="463.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="txt_title" fill="WHITE" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" style="0: 0;">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="id_show" editable="false" layoutY="84.0" prefHeight="375.0" prefWidth="463.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="l_date" layoutX="14.0" layoutY="53.0" prefHeight="17.0" prefWidth="318.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_edit" layoutX="339.0" layoutY="25.0" prefHeight="458.0" prefWidth="463.0" style="-fx-border-color: white;">
+         <children>
+            <TextArea fx:id="id_text" layoutX="32.0" layoutY="118.0" prefHeight="286.0" prefWidth="400.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="b_confirm_edit" layoutX="356.0" layoutY="419.0" mnemonicParsing="false" onAction="#confirmEdit" prefHeight="25.0" prefWidth="75.0" text="Confirm" />
+            <Label layoutX="39.0" layoutY="22.0" text="Title:" textFill="WHITE" />
+            <Label layoutX="39.0" layoutY="53.0" text="Image:" textFill="WHITE" />
+            <TextField fx:id="tf_title" layoutX="89.0" layoutY="18.0" prefHeight="25.0" prefWidth="131.0" />
+            <Label layoutX="253.0" layoutY="22.0" text="Video:" textFill="WHITE" />
+            <TextField fx:id="tf_image_path" layoutX="89.0" layoutY="49.0" prefHeight="25.0" prefWidth="131.0" />
+            <TextField fx:id="tf_video_path" layoutX="301.0" layoutY="18.0" prefHeight="25.0" prefWidth="131.0" />
+            <CheckBox fx:id="cb_remove_image" layoutX="89.0" layoutY="87.0" mnemonicParsing="false" text="Remove stored image" textFill="WHITE" />
+            <Button fx:id="b_confirm_add" layoutX="356.0" layoutY="419.0" mnemonicParsing="false" onAction="#confirmAdd" prefHeight="25.0" prefWidth="75.0" text="Confirm" />
+            <Button fx:id="b_file_chooser" layoutX="227.0" layoutY="49.0" mnemonicParsing="false" onAction="#chooseFile" text="..." />
+            <Hyperlink fx:id="hl_video" layoutX="301.0" layoutY="50.0" onAction="#popUpVideo" text="Show video in pop-up" underline="true" />
+         </children>
+      </Pane>
+      <TextField fx:id="tf_search" layoutX="129.0" layoutY="13.0" onKeyReleased="#searchArticle" promptText="Search by title or text" />
+   </children>
+</AnchorPane>
