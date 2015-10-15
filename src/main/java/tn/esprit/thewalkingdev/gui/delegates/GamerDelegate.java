@@ -58,5 +58,19 @@ public static List<Gamer> dosearchfirstname(String firstname){
 	return  getProxy().searchfirstname(firstname);
 }
  
+public static Object calculNbGamerTeam1(){
+	return getProxy().calculNbGamerTeam1();
+}
 
+public static Object calculNbGamerTeam2(){
+	return getProxy().calculNbGamerTeam2();
+}
+
+public static Object calculNbGamerTeam3(){
+	return getProxy().calculNbGamerTeam3();
+}
+
+public static Object calculNbGamerTeam4(){
+	return getProxy().calculNbGamerTeam4();
+}
 }

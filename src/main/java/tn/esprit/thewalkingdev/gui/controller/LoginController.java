@@ -13,13 +13,13 @@ import javax.swing.JOptionPane;
 
 
 
+
 import tn.esprit.thewalkingdev.entites.Administrator;
 import tn.esprit.thewalkingdev.gui.delegates.AdministratorDelegate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
- 
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -41,7 +41,7 @@ private TextField login;
   private Button btnlogin;
 	 
 	 @FXML 
-	   private void loginAction(ActionEvent actionEvent) throws IOException
+	   private void loginAction(ActionEvent actionEvent) throws Exception
 	   {
  
 		 if(AdministratorDelegate.doauthentifiacation(login.getText(),password.getText())==false)
@@ -49,13 +49,12 @@ private TextField login;
 				JOptionPane.showMessageDialog(null, "Error :Password Or Username Incorrect");
 			 
 		 }else{
-			Parent page_acceuil = FXMLLoader.load(getClass().getResource(
-						"/tn/esprit/thewalkingdev/gui/view/Main.fxml"));
-				Scene scene = new Scene(page_acceuil);
-				Stage ad = (Stage) (((Node) actionEvent.getSource()).getScene()
-						.getWindow());
-				ad.setScene(scene);
-				ad.show();
+			 MainController m = new MainController();
+	            Stage primaryStage = new Stage();
+	            m.start(primaryStage);
+	            Stage stage = (Stage) login.getScene().getWindow();
+	            stage.close();
+			
 			 
 				 		 }
  
