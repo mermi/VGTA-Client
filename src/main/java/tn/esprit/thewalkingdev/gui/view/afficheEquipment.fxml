@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="489.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.AfficheEquipmentController">
+   <children>
+      <ImageView fitHeight="489.0" fitWidth="815.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/background2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="addbrandB" layoutX="629.0" layoutY="178.0" mnemonicParsing="false" onAction="#addBrand" prefHeight="25.0" prefWidth="125.0" stylesheets="@../../css/button.css" text="Manage brands" />
+      <Button fx:id="addEquipmentB" layoutX="627.0" layoutY="111.0" mnemonicParsing="false" onAction="#addEquipment" stylesheets="@../../css/button.css" text="Manage Equipments" />
+      <Button fx:id="delete" layoutX="220.0" layoutY="424.0" mnemonicParsing="false" onAction="#deleteEquipment" stylesheets="@../../css/button.css" text="Delete selected Equipment" />
+      <TableView fx:id="tableView" layoutX="41.0" layoutY="32.0" prefHeight="375.0" prefWidth="519.0" stylesheets="@../../css/tableView.css">
+        <columns>
+          <TableColumn fx:id="idCl" prefWidth="75.0" text="C1" visible="false" />
+          <TableColumn fx:id="quantityCl" prefWidth="170.0" text="Quantity" />
+            <TableColumn fx:id="brandCl" prefWidth="150.0" text="Brand" />
+            <TableColumn fx:id="TypeCl" prefWidth="197.0" text="Type" />
+        </columns>
+      </TableView>
+      <Button fx:id="manageTypeB" layoutX="627.0" layoutY="245.0" mnemonicParsing="false" onAction="#manageTypes" prefHeight="25.0" prefWidth="125.0" stylesheets="@../../css/button.css" text="Manage Types" />
+   </children>
+</AnchorPane>

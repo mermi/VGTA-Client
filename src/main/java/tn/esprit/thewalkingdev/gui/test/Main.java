@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -42,7 +43,7 @@ public class Main extends Application {
 			BorderPane root = (BorderPane) FXMLLoader.load(getClass()
 					.getResource("/tn/esprit/thewalkingdev/gui/view/Login.fxml"));
 			Scene scene = new Scene(root);
-			 
+			primaryStage.getIcons().add(new Image("/tn/esprit/thewalkingdev/Images/Image1.png"));
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		

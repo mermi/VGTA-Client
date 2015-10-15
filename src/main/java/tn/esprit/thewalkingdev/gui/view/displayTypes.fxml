@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayTypesController">
+   <children>
+      <ImageView fitHeight="501.0" fitWidth="826.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/background2.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="116.0" layoutY="107.0" prefHeight="200.0" prefWidth="302.0">
+         <columns>
+            <TableColumn fx:id="idCl" prefWidth="75.0" text="C1" visible="false" />
+            <TableColumn fx:id="typeCl" prefWidth="301.0" text="Type" />
+         </columns>
+      </TableView>
+      <Button fx:id="delete" layoutX="116.0" layoutY="352.0" mnemonicParsing="false" onAction="#deleteType" text="Delete selected Type" />
+      <Label layoutX="456.0" layoutY="75.0" text="Add a Type" textFill="#d30e0e">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTF" layoutX="638.0" layoutY="79.0" promptText="name of type" />
+      <Button fx:id="addB" layoutX="694.0" layoutY="124.0" mnemonicParsing="false" onAction="#add" text="Add" />
+      <Label layoutX="456.0" layoutY="207.0" text="Update a Type" textFill="#d30e0e">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="update" layoutX="286.0" layoutY="352.0" mnemonicParsing="false" onAction="#updateTypeFromTable" text="Update selected Type" />
+      <TextField fx:id="nameTF1" layoutX="638.0" layoutY="211.0" promptText="name of type" />
+      <Button fx:id="updateB" layoutX="685.0" layoutY="255.0" mnemonicParsing="false" onAction="#update" text="Update" />
+      <Button fx:id="back" layoutX="40.0" layoutY="29.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>
