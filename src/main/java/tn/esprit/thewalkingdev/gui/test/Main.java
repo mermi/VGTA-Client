@@ -1,8 +1,10 @@
 package tn.esprit.thewalkingdev.gui.test;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import tn.esprit.thewalkingdev.gui.controller.ScreensController;
@@ -19,6 +21,8 @@ public class Main extends Application {
 	/*
 	 * Event Screen
 	 */
+	public static String DisplayLoginScreen = "tn/esprit/thewalkingdev/gui/view/Login.fxml";
+
 	public static String DisplayEventScreen = "tn/esprit/thewalkingdev/gui/view/Main.FXML";
 	public static String DisplayEvent = "Display Event";
 	
@@ -34,25 +38,14 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		ScreensController mainCtrl = new ScreensController();
-		mainCtrl.loadScreen(DisplayEquipment, DisplayEquipmentScreen);
 		
+			BorderPane root = (BorderPane) FXMLLoader.load(getClass()
+					.getResource("/tn/esprit/thewalkingdev/gui/view/Login.fxml"));
+			Scene scene = new Scene(root);
+			 
+			primaryStage.setScene(scene);
+			primaryStage.show();
 		
-
-		this.primaryStage = primaryStage;
-		mainCtrl.setScreen(DisplayEquipment);
-		
-		Group root = new Group();
-		root.getChildren().addAll(mainCtrl);
-		
-		Scene scene = new Scene(root);
-		primaryStage.setTitle("Display Equipments");
-		// primaryStage.getIcons().add(new
-		// Image(Main.class.getResourceAsStream("/cdlr/images/icon.png")));
-		primaryStage.setScene(scene);
-		primaryStage.initStyle(StageStyle.UNDECORATED);
-		primaryStage.show();
-
 	}
 
 	/**
