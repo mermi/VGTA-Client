@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40"
+fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayTeamsController">
+   <children>
+      <AnchorPane prefHeight="489.0" prefWidth="815.0">
+         <children>
+            <Button fx:id="logisticBtn" layoutY="2.0" mnemonicParsing="false" onAction="#LogisticBtnAction" prefHeight="244.0" prefWidth="407.5" text="logistic" />
+            <Button fx:id="organisationBtn" layoutY="249.0" mnemonicParsing="false" onAction="#OrganisationBtnAction" prefHeight="244.0" prefWidth="408.0" text="organisation" />
+            <Button fx:id="MediaBtn" layoutX="408.0" mnemonicParsing="false" onAction="#mediaBtnAction" prefHeight="250.0" prefWidth="408.0" text="media" />
+            <Button fx:id="sponsoringBtn" layoutX="408.0" layoutY="249.0" mnemonicParsing="false" onAction="#SponsoringBtnAction" prefHeight="244.0" prefWidth="408.0" text="sponsoring" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
