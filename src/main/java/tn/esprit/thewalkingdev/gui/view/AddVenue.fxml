@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="291.0" prefWidth="411.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40">
+   <children>
+      <Text fill="#c61919" layoutX="149.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Venue" textAlignment="CENTER" wrappingWidth="92.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label layoutX="42.0" layoutY="99.0" prefHeight="17.0" prefWidth="46.0" text="Label: " textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="labelField" layoutX="103.0" layoutY="96.0" />
+      <Label layoutX="39.0" layoutY="154.0" text="Address: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addressField" layoutX="103.0" layoutY="151.0" />
+      <Button fx:id="addVenue" layoutX="103.0" layoutY="221.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="195.0" layoutY="221.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</AnchorPane>

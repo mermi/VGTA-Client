@@ -14,4 +14,10 @@ public class EventCrudDelegate {
 	public static void addEvent(Event event){
 		eventService.addEvent(event);
 	}
+	public static void doEditEvent (Event event){
+		eventService.updateEvent(event);
+	}
+	public static void doDeleteEvent(int id){
+		eventService.deleteEvent(id);
+	}
 }

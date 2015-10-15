@@ -1,17 +1,11 @@
 package tn.esprit.thewalkingdev.gui.test;
 
-import java.io.IOException;
-
-import tn.esprit.thewalkingdev.gui.test.Main;
-import tn.esprit.thewalkingdev.gui.controller.ScreensController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import tn.esprit.thewalkingdev.manageBrand.contract.BrandDAORemote;
+import tn.esprit.thewalkingdev.gui.controller.ScreensController;
 
 public class Main extends Application {
 
@@ -21,6 +15,12 @@ public class Main extends Application {
 	public static String DisplayEquipment = "Display Equipments";
 	public static String AddBrandtScreen = "/tn/esprit/thewalkingdev/gui/view/addBrand.FXML";
 	public static String AddBrand = "Add Brand";
+	
+	/*
+	 * Event Screen
+	 */
+	public static String DisplayEventScreen = "tn/esprit/thewalkingdev/gui/view/Main.FXML";
+	public static String DisplayEvent = "Display Event";
 	
 	public static Stage primaryStage;
 
@@ -36,11 +36,15 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		ScreensController mainCtrl = new ScreensController();
 		mainCtrl.loadScreen(DisplayEquipment, DisplayEquipmentScreen);
+		
+		
 
 		this.primaryStage = primaryStage;
 		mainCtrl.setScreen(DisplayEquipment);
+		
 		Group root = new Group();
 		root.getChildren().addAll(mainCtrl);
+		
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("Display Equipments");
 		// primaryStage.getIcons().add(new
