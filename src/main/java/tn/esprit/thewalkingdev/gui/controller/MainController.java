@@ -6,8 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class MainController implements ControlledScreen {
 	ScreensController ctrl;
@@ -17,6 +20,8 @@ public class MainController implements ControlledScreen {
 	private Button viewLog;
 	@FXML
 	private Button viewLogEvent;
+	@FXML
+	private Button viewgamerr;
 	public static String DisplayEquipmentScreen = "/tn/esprit/thewalkingdev/gui/view/afficheEquipment.FXML";
 	public static String DisplayEquipment = "Add Equipment";
 	public static String DisplayEventScreen = "/tn/esprit/thewalkingdev/gui/view/AddEvent.fxml";
@@ -41,8 +46,29 @@ public class MainController implements ControlledScreen {
 				DisplayEventScreen));
 		pane.getChildren().add(node);
 	}
+	@FXML
+	public void viewgamer(ActionEvent event) throws IOException {
+		pane.getChildren().clear();
+		Node node;
+		node = (Node) FXMLLoader.load(getClass().getResource(
+				"/tn/esprit/thewalkingdev/gui/view/AffichageGamer.fxml"));
+		pane.getChildren().add(node);
+	}
 	@Override
 	public void setScreenParent(ScreensController screenPage) {
 		ctrl = screenPage;
 	}
-}
+	@FXML
+	public void deco(ActionEvent actionEvent) {
+		try {
+			Parent page_acceuil = FXMLLoader.load(getClass().getResource(
+					"/tn/esprit/thewalkingdev/gui/view/Login.fxml"));
+			Scene scene = new Scene(page_acceuil);
+			Stage ad = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+			ad.setScene(scene);
+			ad.show();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}}

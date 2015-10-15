@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="489.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.ShowGamerController">
+   <children>
+      <ImageView fitHeight="581.0" fitWidth="821.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="6.0" prefHeight="489.0" prefWidth="815.0">
+         <children>
+            <ImageView fx:id="immage" fitHeight="99.0" fitWidth="112.0" layoutX="700.0" pickOnBounds="true" preserveRatio="true" />
+            <TableView fx:id="table" editable="true" layoutX="55.0" layoutY="117.0" onMouseClicked="#mosoue" prefHeight="325.0" prefWidth="653.0">
+              <columns>
+                <TableColumn fx:id="firstNameCol" prefWidth="112.0" text="First Name" />
+                <TableColumn fx:id="lastNameCol" prefWidth="126.0" text="Last Name" />
+                  <TableColumn fx:id="emailCol" prefWidth="154.0" text="Email" />
+                  <TableColumn fx:id="role" prefWidth="145.0" text="Role" />
+                  <TableColumn fx:id="team" prefWidth="115.0" text="Team" />
+              </columns>
+            </TableView>
+            <Button layoutX="213.0" layoutY="67.0" mnemonicParsing="false" onAction="#ajoutAction" prefHeight="32.0" prefWidth="107.0" text="add" />
+            <Button layoutX="469.0" layoutY="67.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="32.0" prefWidth="107.0" text="remove" />
+            <Button fx:id="update" layoutX="342.0" layoutY="67.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="32.0" prefWidth="107.0" text="update" />
+            <Button fx:id="recherche" layoutX="567.0" layoutY="452.0" mnemonicParsing="false" onAction="#recherche" prefHeight="32.0" prefWidth="107.0" text="Search" />
+            <Label fx:id="lfirstname" layoutX="233.0" layoutY="451.0" prefHeight="17.0" prefWidth="95.0" text="By First Name" visible="false" />
+            <Label fx:id="llastname" layoutX="233.0" layoutY="451.0" prefHeight="17.0" prefWidth="149.0" text="By Last Name" visible="false" />
+            <Label fx:id="lemail" layoutX="233.0" layoutY="451.0" prefHeight="17.0" prefWidth="149.0" text="By Email" visible="false" />
+            <ChoiceBox fx:id="critaire" layoutX="183.0" layoutY="472.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="bemail" layoutX="213.0" layoutY="468.0" visible="false" />
+            <TextField fx:id="blastname" layoutX="213.0" layoutY="468.0" visible="false" />
+            <TextField fx:id="bfName" layoutX="213.0" layoutY="468.0" visible="false" />
+            <Button fx:id="refrech" layoutX="681.0" layoutY="452.0" mnemonicParsing="false" onAction="#refrech" prefHeight="32.0" prefWidth="107.0" text="Refresh" />
+            <ChoiceBox fx:id="brole" layoutX="223.0" layoutY="472.0" prefWidth="150.0" visible="false" />
+            <ChoiceBox fx:id="bteam" layoutX="223.0" layoutY="472.0" prefWidth="150.0" visible="false" />
+            <Hyperlink fx:id="newadmin" layoutX="14.0" layoutY="14.0" onAction="#addnew" text="Add New Administrator" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
