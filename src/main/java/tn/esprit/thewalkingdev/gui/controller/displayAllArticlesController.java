@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.time.Instant;
 import java.util.Date;
@@ -139,9 +140,10 @@ public class displayAllArticlesController implements Initializable {
 
 		ArticleCrudDelegate.doAddArticle(article);
 		list.clear();
-		title = "";
-		text = "";
-		video = "";
+		tf_title.clear();
+		tf_video_path.clear();
+		id_text.clear();
+		tf_image_path.clear();
 		displayArticles();
 
 	}
@@ -181,6 +183,8 @@ public class displayAllArticlesController implements Initializable {
 				fileInputStream = new FileInputStream(file);
 				fileInputStream.read(bFile);
 				fileInputStream.close();
+				 
+				 article_edit.setImage(bFile);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -197,9 +201,11 @@ public class displayAllArticlesController implements Initializable {
 		}
 
 		ArticleCrudDelegate.doUpdateArticle(article_edit);
-		title = "";
-		text = "";
-		video = "";
+		list.clear();
+		tf_title.clear();
+		tf_video_path.clear();
+		id_text.clear();
+		tf_image_path.clear();
 		article_edit = new Article();
 		list.clear();
 		displayArticles();
