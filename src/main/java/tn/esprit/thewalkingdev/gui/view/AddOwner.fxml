@@ -15,7 +15,7 @@
       </Text>
       <TableView editable="true" layoutX="81.0" layoutY="107.0" prefHeight="200.0" prefWidth="301.0" stylesheets="@../../css/button.css">
         <columns>
-          <TableColumn fx:id="nameOwner" prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="nameOwner" prefWidth="75.0" text="Name Team" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
