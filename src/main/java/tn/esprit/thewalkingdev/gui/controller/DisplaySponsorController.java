@@ -16,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import tn.esprit.thewalkingdev.entites.Sponsor;
 import tn.esprit.thewalkingdev.services.contract.*;
@@ -84,6 +85,9 @@ public class DisplaySponsorController implements Initializable {
 	private DatePicker dtupstartcont;
 	@FXML
 	private Button btupdateSpon;
+	@FXML
+	private TextField tf_search_sponsor;
+
 	static SponsorRemote remoteSponsor;
 	static SponsorRemote remoteDelete;
 	private ObservableList<Sponsor> listSponsor;
@@ -142,6 +146,8 @@ public class DisplaySponsorController implements Initializable {
 		SendMail sendMail = new SendMail();
 		tn.esprit.thewalkingdev.gui.mail.SendMail.sendMessage(subject, contenu,
 				Dest, "anesmazouni@gmail.com");
+		JOptionPane.showMessageDialog(null,
+				"Mail Send successfully");
 	}
 
 	@FXML
@@ -215,6 +221,54 @@ public class DisplaySponsorController implements Initializable {
 		CLDateEnd.setCellValueFactory(new PropertyValueFactory<>("dateEnd"));
 		tableView.setItems(list);
 		;
+
+	}
+
+	// Event Listener on TextField[#tf_search_sponsor].onKeyReleased
+	@FXML
+	public void searchAction(KeyEvent event) {
+		
+		if(tf_search_sponsor == null){
+			SponsorDelegate.displaySponsor().stream().forEach((Sponsor) -> {
+				list.add(Sponsor);
+			});
+			;
+			tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+			// tableView.setTableMenuButtonVisible(true);
+			ClIdSponsor
+					.setCellValueFactory(new PropertyValueFactory<>("id_sponsor"));
+			ClNameSponsor.setCellValueFactory(new PropertyValueFactory<>(
+					"name_sponsor"));
+			ClNameContact.setCellValueFactory(new PropertyValueFactory<>(
+					"name_contact_sponsor"));
+			ClEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+			ClDateStart
+					.setCellValueFactory(new PropertyValueFactory<>("dateStart"));
+			CLDateEnd.setCellValueFactory(new PropertyValueFactory<>("dateEnd"));
+			tableView.setItems(list);
+			
+		}
+		list.clear();
+		String keyword = tf_search_sponsor.getText();
+		
+		SponsorDelegate.searchSponsor(keyword).stream().forEach((Sponsor) -> {
+			list.add(Sponsor);
+		});
+		;
+		tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+		// tableView.setTableMenuButtonVisible(true);
+		ClIdSponsor
+				.setCellValueFactory(new PropertyValueFactory<>("id_sponsor"));
+		ClNameSponsor.setCellValueFactory(new PropertyValueFactory<>(
+				"name_sponsor"));
+		ClNameContact.setCellValueFactory(new PropertyValueFactory<>(
+				"name_contact_sponsor"));
+		ClEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+		ClDateStart
+				.setCellValueFactory(new PropertyValueFactory<>("dateStart"));
+		CLDateEnd.setCellValueFactory(new PropertyValueFactory<>("dateEnd"));
+		tableView.setItems(list);
+		
 
 	}
 }
