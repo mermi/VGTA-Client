@@ -32,9 +32,9 @@ public class DisplayEventController implements Initializable, ControlledScreen {
 	@FXML
 	private Button addEvent;
 	@FXML
-	private Button back;
+	private Button backB;
 	@FXML
-	private ComboBox<String> typeCB;
+	private ComboBox<String> TypeECB;
 	@FXML
 	private ComboBox<String> venueCB;
 	@FXML
@@ -45,15 +45,15 @@ public class DisplayEventController implements Initializable, ControlledScreen {
 	private Button addTypeEvent;
 	@FXML
 	private Button addVenue;
-	@FXML
-	private Button addOwner;
 	ScreensController ctr;
 	ObservableList<String> listTypeEvent;
 	private ObservableList<String> listVenue;
 	@FXML
 	private DatePicker dateEvent;
-	
+	@FXML
 	private TextField numberOfReservation;
+	@FXML
+	private TextField NameEvent;
 	// Event Listener on Button[#displayAddEvent].onAction
 	@FXML
 	public void displayAddEvent(ActionEvent event) {
@@ -166,13 +166,13 @@ public class DisplayEventController implements Initializable, ControlledScreen {
 		listTypeEventdb.addAll(TypeEventCrudDelegate.doShowTypeEventByLabel());
 		listTypeEvent = FXCollections.observableList(listTypeEventdb);
 		System.out.println(listTypeEvent.size());
-		//typeCB.setItems(listTypeEvent);
+		TypeECB.setItems(listTypeEvent);
 		
 		List<String> listVenuedb = new ArrayList<String>();
 		listVenuedb.addAll(VenueCrudDelegate.doShowVenueByLabel());
 		listVenue = FXCollections.observableArrayList(listTypeEventdb);
 		System.out.println(listVenue.size());
-		//venueCB.setItems(listVenue);
+		venueCB.setItems(listVenue);
 		
 	}
 }
