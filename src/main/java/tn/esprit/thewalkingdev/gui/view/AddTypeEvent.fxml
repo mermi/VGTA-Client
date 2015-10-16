@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.addTypeEventController">
    <children>
       <Accordion layoutX="-153.0" layoutY="-84.0">
         <panes>
@@ -20,13 +20,13 @@
                   <Font size="16.0" />
                </font>
             </Text>
-            <Label layoutX="64.0" layoutY="122.0" prefHeight="17.0" prefWidth="76.0" text="Labe: " textAlignment="JUSTIFY" textFill="WHITE">
+            <Label layoutX="64.0" layoutY="122.0" prefHeight="17.0" prefWidth="76.0" text="Label: " textAlignment="JUSTIFY">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="labelEvent" layoutX="140.0" layoutY="119.0" />
-            <Button layoutX="130.0" layoutY="191.0" mnemonicParsing="false" text="Send" />
+            <TextField fx:id="labelEvent" layoutX="140.0" layoutY="119.0" promptText="Label Event" />
+            <Button fx:id="addTypeEvent" layoutX="130.0" layoutY="191.0" mnemonicParsing="false" onAction="#addTypeEvent" text="Send" />
             <Button layoutX="228.0" layoutY="191.0" mnemonicParsing="false" text="Reset" />
          </children>
       </Pane>

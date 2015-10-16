@@ -76,37 +76,8 @@ public class addEventController implements Initializable, ControlledScreen {
 		//EventCrudDelegate.addEvent(nameEvent.getText());
 	}
 	@FXML
-	public void addTypeEvent(ActionEvent event){
-		try {
-		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/tn/esprit/thewalkingdev/gui/view/AddTypeEvent.fxml"));
-        
-			loader.load();
-			Parent P = loader.getRoot();
-	        Stage stage = new Stage();
-	        stage.setScene(new Scene(P));
-	        stage.show();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        
-	}
-	@FXML
 	public void addVenue(ActionEvent event){
-		try {
-		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/tn/esprit/thewalkingdev/gui/view/AddVenue.fxml"));
-        
-			loader.load();
-			Parent P = loader.getRoot();
-	        Stage stage = new Stage();
-	        stage.setScene(new Scene(P));
-	        stage.show();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
         
 	}
 	@FXML

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="413.0" prefWidth="444.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40">
+<AnchorPane prefHeight="413.0" prefWidth="444.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="tn.esprit.thewalkingdev.gui.controller.AddOwnerController">
    <children>
       <Text fill="#da1515" layoutX="142.0" layoutY="47.0" strokeLineCap="ROUND" strokeWidth="0.0" text="List of Organisation Team" textAlignment="CENTER" wrappingWidth="168.4453125">
          <font>
