@@ -72,7 +72,9 @@ public class AddEquipmentController implements Initializable, ControlledScreen {
 		equipment.setBrand(brandCB.getValue());
 		equipment.setQuantity(Integer.parseInt(quantityField.getText()));
 		equipment.setTypeEquipment(typeCB.getValue());
-		
+		if (quantityField.getText().isEmpty()
+				) {
+			JOptionPane.showMessageDialog(null, "fill in all fields");}
 		EquipmentDelegate.addEquipment(equipment);
 		JOptionPane.showMessageDialog(null, "Ajout effectué avec succés");
 

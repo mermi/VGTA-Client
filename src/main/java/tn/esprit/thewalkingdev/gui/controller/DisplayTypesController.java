@@ -97,10 +97,14 @@ public class DisplayTypesController implements Initializable, ControlledScreen {
 
 		type.setTypeEq(nameTF.getText());
 		System.out.println(nameTF.getText());
+		if (nameTF.getText().isEmpty()
+				) {
+			JOptionPane.showMessageDialog(null, "Fill in all fields");}
+		else{
 		TypeEquipmentDelegate.addTypeEquipment(type);
 		list.add(type);
-		JOptionPane.showMessageDialog(null, "Ajout effectué avec succés");
-	
+		JOptionPane.showMessageDialog(null, "Ajout effectué avec succés");}
+	nameTF.clear();
 	}
 
 	// Event Listener on Button[#update].onAction
@@ -110,6 +114,8 @@ public class DisplayTypesController implements Initializable, ControlledScreen {
 		type2 = (TypeEquipment) tableView.getSelectionModel().getSelectedItem();
 		nameTF1.setText(type2.getTypeEq());
 		list.remove(type2);
+		addB.setDisable(true);
+		updateB.setDisable(false);
 	}
 
 	// Event Listener on Button[#updateB].onAction
@@ -130,7 +136,9 @@ public class DisplayTypesController implements Initializable, ControlledScreen {
 		idCl.setCellValueFactory(new PropertyValueFactory<>("id"));
 		typeCl.setCellValueFactory(new PropertyValueFactory<>("typeEq"));
 		tableView.setItems(list);
-		;
+		addB.setDisable(false);
+		updateB.setDisable(true);
+		nameTF1.clear();
 	}
 
 	@Override
