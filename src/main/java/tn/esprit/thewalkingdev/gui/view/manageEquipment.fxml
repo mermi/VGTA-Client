@@ -29,8 +29,8 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <ComboBox fx:id="brandCB" layoutX="613.0" layoutY="180.0" prefWidth="150.0" promptText="Brand" stylesheets="@../../css/button.css" />
-      <ComboBox fx:id="typeCB" layoutX="613.0" layoutY="237.0" prefWidth="150.0" promptText="Type" stylesheets="@../../css/button.css" />
+      <ComboBox fx:id="brandCB" layoutX="585.0" layoutY="180.0" prefHeight="33.0" prefWidth="206.0" promptText="Brand" stylesheets="@../../css/button.css" />
+      <ComboBox fx:id="typeCB" layoutX="585.0" layoutY="229.0" prefHeight="33.0" prefWidth="206.0" promptText="Type" stylesheets="@../../css/button.css" />
       <Label layoutX="269.0" layoutY="29.0" text="Manage Equipment" textFill="#ee1818">
          <font>
             <Font size="32.0" />

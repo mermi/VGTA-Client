@@ -80,16 +80,20 @@ public class manageEquipmentController implements Initializable,
 	@FXML
 	public void addEquipment(ActionEvent event) {
 		Equipment equipment = new Equipment();
-		
-		
-		
-		
+		Team t = new Team();
+		t.setId_team(1);
+		equipment.setTeamLogistics(t);
 		equipment.setBrand(brandCB.getValue());
 		equipment.setQuantity(Integer.parseInt(quantityField.getText()));
 		equipment.setTypeEquipment(typeCB.getValue());
+		if (quantityField.getText().isEmpty() || brandCB.getValue()==null || typeCB.getValue()==null
+				) {
+			JOptionPane.showMessageDialog(null, "Fill in all fields");}
+		else{
 		EquipmentDelegate.addEquipment(equipment);
 		list.add(equipment);
-		JOptionPane.showMessageDialog(null, "Ajout effectué avec succés");
+		JOptionPane.showMessageDialog(null, "Ajout effectué avec succés");}
+		quantityField.clear();
 	}
 
 	// Event Listener on Button[#backB].onAction
@@ -127,6 +131,7 @@ public class manageEquipmentController implements Initializable,
 		table.setItems(list);
 		add.setDisable(false);
 		update.setDisable(true);
+		quantityField.clear();
 	}
 
 	// Event Listener on Button[#updateEqui].onAction

@@ -5,6 +5,7 @@ import java.util.List;
 
 import javafx.scene.chart.PieChart;
 import tn.esprit.thewalkingdev.entites.Equipment;
+import tn.esprit.thewalkingdev.entites.Team;
 import tn.esprit.thewalkingdev.gui.utils.ServicesLocator;
 import tn.esprit.thewalkingdev.services.contract.EquipmentRemote;
 import tn.esprit.thewalkingdev.services.contract.TypeEquipmentDAORemote;
@@ -21,6 +22,7 @@ public class EquipmentDelegate {
 		
 	}
 		public static void addEquipment(Equipment equi){
+			
 			getProxy().addEquipement(equi);
 		}
 		public static void deleteEquipment(Equipment equi){

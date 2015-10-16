@@ -96,9 +96,14 @@ public class DisplayBrandController implements Initializable, ControlledScreen {
 		Brand brand = new Brand();
 		brand.setLabel(nameTF.getText());
 		System.out.println(nameTF.getText());
+		if (nameTF.getText().isEmpty()
+				) {
+			JOptionPane.showMessageDialog(null, "Fill in all fields");}
+		else{
 		BrandDelegate.addBrand(brand);
 		list.add(brand);
-		JOptionPane.showMessageDialog(null, "Ajout effectué avec succés");
+		JOptionPane.showMessageDialog(null, "Ajout effectué avec succés");}
+		nameTF.clear();
 	}
 
 	// Event Listener on Button[#update].onAction
@@ -109,6 +114,8 @@ public class DisplayBrandController implements Initializable, ControlledScreen {
 		nameTF1.setText(brand2.getLabel());
 		idBrand = brand2.getIdMarque();
 		list.remove(brand2);
+		addB.setDisable(true);
+		updateB.setDisable(false);
 
 	}
 
@@ -130,7 +137,9 @@ public class DisplayBrandController implements Initializable, ControlledScreen {
 		idCl.setCellValueFactory(new PropertyValueFactory<>("id"));
 		brandCl.setCellValueFactory(new PropertyValueFactory<>("label"));
 		tableView.setItems(list);
-		;
+		addB.setDisable(false);
+		updateB.setDisable(true);
+		nameTF1.clear();
 	}
 
 	@Override

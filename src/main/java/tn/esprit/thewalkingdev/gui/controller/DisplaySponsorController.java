@@ -119,6 +119,7 @@ public class DisplaySponsorController implements Initializable {
 	// addsponsor
 	@FXML
 	public void addsponsor(ActionEvent event) throws IOException {
+		tableView.setDisable(true);
 		PaneAddSpon.getChildren().clear();
 		Node node;
 		node = (Node) FXMLLoader.load(getClass().getResource(AddSponsorScreen));
