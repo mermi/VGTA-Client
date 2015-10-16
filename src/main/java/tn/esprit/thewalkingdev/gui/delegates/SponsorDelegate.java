@@ -7,25 +7,36 @@ import tn.esprit.thewalkingdev.gui.utils.ServicesLocator;
 import tn.esprit.thewalkingdev.services.contract.SponsorRemote;
 
 public class SponsorDelegate {
-	static SponsorRemote  sponsorService = (SponsorRemote) ServicesLocator
-			.getInstance()
-			.getProxy(
-					"vgta/SponsorCrud!tn.esprit.thewalkingdev.services.contract.SponsorRemote");
-	
-	public static void addSponsor(Sponsor sponsor){
-		sponsorService.addSponsor(sponsor);
+	//private static SponsorRemote remote;
+	private static final String jndi = "vgta/SponsorCrud!tn.esprit.thewalkingdev.services.contract.SponsorRemote";
+
+	public static SponsorRemote getProxy() {
+
+		return (SponsorRemote) ServicesLocator.getInstance().getProxy(jndi);
+
 	}
-	public static void deleteSponsor(Sponsor sponsor){
-		sponsorService.deleteSponsor(sponsor);
+
+	public static void addSponsor(Sponsor sponsor) {
+		getProxy().addSponsor(sponsor);
 	}
-	public static List<Sponsor> displaySponsor(){
-		return sponsorService.findAllSponsors();
+
+	public static void deleteSponsor(Sponsor sponsor) {
+		getProxy().deleteSponsor(sponsor);
 	}
-	public static void updateSponsor(Sponsor sponsor){
-		sponsorService.updateSponsor(sponsor);
+
+	public static List<Sponsor> displaySponsor() {
+		return getProxy().findAllSponsors();
 	}
-	public static Sponsor findSponsorById(Integer idSponsor){
-		return sponsorService.findSponsorById(idSponsor);
+
+	public static void updateSponsor(Sponsor sponsor) {
+		getProxy().updateSponsor(sponsor);
 	}
-	
+
+	public static Sponsor findSponsorById(Integer idSponsor) {
+		return getProxy().findSponsorById(idSponsor);
+	}
+	public static List<Sponsor> searchSponsor(String keyword) {
+		return getProxy().searchSponsor(keyword);
+	}
+
 }
