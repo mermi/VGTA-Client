@@ -1,7 +1,5 @@
 package tn.esprit.thewalkingdev.gui.controller;
 
-
-
 import javax.naming.Context;
 
 import tn.esprit.thewalkingdev.entites.Sponsor;
@@ -37,6 +35,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.swing.JOptionPane;
+
 public class AddSponsorController {
 	@FXML
 	private Button btAddSponsor;
@@ -56,44 +55,47 @@ public class AddSponsorController {
 	private DatePicker dateStart;
 	@FXML
 	private DatePicker dateEnd;
-	
+
 	static TeamRemote remoteTeam;
 	// Event Listener on Button[#btAddSponsor].onAction
 	@FXML
-	
 	static SponsorRemote remote;
 	private List<Team> listTeamDb;
 	private ObservableList<Team> listTeam;
-	
+
 	public void AddSponsor(ActionEvent event) {
 		Sponsor Sponsor = new Sponsor();
 		Sponsor.setName_sponsor(tfnamesponsor.getText());
 		Sponsor.setName_contact_sponsor(tfnamecontactsponsor.getText());
 		Sponsor.setEmail(tfemail.getText());
-	
-		Team teamSponsor =new Team();
+
+		Team teamSponsor = new Team();
 		teamSponsor.setId_team(4);
 		Sponsor.setTeamSponsor(teamSponsor);
-	
+
 		LocalDate localDateS = dateStart.getValue();
-		Instant instantS = Instant.from(localDateS.atStartOfDay(ZoneId.systemDefault()));
+		Instant instantS = Instant.from(localDateS.atStartOfDay(ZoneId
+				.systemDefault()));
 		Date dts = Date.from(instantS);
-   
+
 		LocalDate localDateE = dateEnd.getValue();
-		Instant instantE = Instant.from(localDateE.atStartOfDay(ZoneId.systemDefault()));
+		Instant instantE = Instant.from(localDateE.atStartOfDay(ZoneId
+				.systemDefault()));
 		Date dtE = Date.from(instantE);
-		
-		
-	Sponsor.setDateStart(dts);
-	Sponsor.setDateEnd(dtE);
-	
-	  if (tfnamesponsor.getText().isEmpty() || tfnamecontactsponsor.getText().isEmpty() ) {
-          JOptionPane.showMessageDialog(null, "fill in all fields");
-      } else if (tfemail.getText().contains("@") == false) {
-        JOptionPane.showMessageDialog(null, "check your address mail");}
-	else {
-	SponsorDelegate.addSponsor(Sponsor);
-	JOptionPane.showMessageDialog(null, "Adding completed successfully");}
+
+		Sponsor.setDateStart(dts);
+		Sponsor.setDateEnd(dtE);
+
+		if (tfnamesponsor.getText().isEmpty()
+				|| tfnamecontactsponsor.getText().isEmpty()) {
+			JOptionPane.showMessageDialog(null, "fill in all fields");
+		} else if (tfemail.getText().contains("@") == false) {
+			JOptionPane.showMessageDialog(null, "check your address mail");
+		} else {
+			SponsorDelegate.addSponsor(Sponsor);
+			JOptionPane
+					.showMessageDialog(null, "Adding completed successfully");
+		}
 	}
 
 }
