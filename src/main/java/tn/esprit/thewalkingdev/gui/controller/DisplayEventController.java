@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import tn.esprit.thewalkingdev.entites.Article;
 import tn.esprit.thewalkingdev.gui.delegates.TypeEventCrudDelegate;
 import tn.esprit.thewalkingdev.gui.delegates.VenueCrudDelegate;
 import javafx.fxml.FXML;
@@ -34,7 +35,7 @@ public class DisplayEventController implements Initializable, ControlledScreen {
 	@FXML
 	private Button back;
 	@FXML
-	private ComboBox<String> typeCB;
+	private ComboBox<String> TypeCB;
 	@FXML
 	private ComboBox<String> venueCB;
 	@FXML
@@ -162,17 +163,21 @@ public class DisplayEventController implements Initializable, ControlledScreen {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		
 		List<String> listTypeEventdb = new ArrayList<String>();
 		listTypeEventdb.addAll(TypeEventCrudDelegate.doShowTypeEventByLabel());
 		listTypeEvent = FXCollections.observableList(listTypeEventdb);
 		System.out.println(listTypeEvent.size());
-		//typeCB.setItems(listTypeEvent);
+		TypeCB.setItems(listTypeEvent);
 		
 		List<String> listVenuedb = new ArrayList<String>();
 		listVenuedb.addAll(VenueCrudDelegate.doShowVenueByLabel());
 		listVenue = FXCollections.observableArrayList(listTypeEventdb);
 		System.out.println(listVenue.size());
-		//venueCB.setItems(listVenue);
+		venueCB.setItems(listVenue);
+		
+		
 		
 	}
 }

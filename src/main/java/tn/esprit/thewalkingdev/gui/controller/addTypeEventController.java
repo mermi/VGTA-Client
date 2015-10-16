@@ -1,6 +1,6 @@
 package tn.esprit.thewalkingdev.gui.controller;
 
-import java.awt.TextField;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -10,12 +10,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class addTypeEventController implements Initializable, ControlledScreen {
 	ScreensController ctr;
 	
 	@FXML
-	private TextField label;
+	private TextField labelEvent;
 	@FXML
 	private Button addTypeEvent;
 	
@@ -32,9 +33,9 @@ public class addTypeEventController implements Initializable, ControlledScreen {
 	// Event Listener on Button[#addTypeEvent].onAction
 		@FXML
 		public void addTypeEvent(ActionEvent event) {
-			System.out.println(label.getText().toString());
+			String label = labelEvent.getText();
 			
-			TypeEventCrudDelegate.doAddTypeEvent(new TypeEvent(label.getText()));
+			TypeEventCrudDelegate.doAddTypeEvent(new TypeEvent(label));
 		}
 
 }
