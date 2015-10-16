@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.UpdateGamerController">
+<AnchorPane fx:id="pane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.UpdateGamerController">
    <children>
       <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="500.0" prefWidth="700.0">
          <children>
@@ -15,12 +15,12 @@
                   <Font name="System Bold Italic" size="32.0" />
                </font>
             </Text>
-            <Button fx:id="add" layoutX="426.0" layoutY="398.0" mnemonicParsing="false" onAction="#ajoutAction" prefHeight="36.0" prefWidth="118.0" text="Update" />
-            <TextField fx:id="fnom" layoutX="162.0" layoutY="106.0" />
-            <TextField fx:id="fprenom" layoutX="452.0" layoutY="106.0" />
-            <TextField fx:id="femail" layoutX="162.0" layoutY="165.0" prefHeight="25.0" prefWidth="149.0" />
-            <TextField fx:id="fnumtel" layoutX="162.0" layoutY="213.0" prefHeight="25.0" prefWidth="149.0" />
-            <PasswordField fx:id="fpassword" layoutX="162.0" layoutY="271.0" prefHeight="25.0" prefWidth="149.0" />
+            <Button fx:id="add" layoutX="426.0" layoutY="398.0" mnemonicParsing="false" onAction="#ajoutAction" prefHeight="36.0" prefWidth="118.0" stylesheets="@../../css/button.css" text="Update" />
+            <TextField fx:id="fnom" layoutX="162.0" layoutY="106.0" stylesheets="@../../css/button.css" />
+            <TextField fx:id="fprenom" layoutX="452.0" layoutY="106.0" stylesheets="@../../css/button.css" />
+            <TextField fx:id="femail" layoutX="162.0" layoutY="165.0" prefHeight="25.0" prefWidth="149.0" stylesheets="@../../css/button.css" />
+            <TextField fx:id="fnumtel" layoutX="162.0" layoutY="213.0" prefHeight="25.0" prefWidth="149.0" stylesheets="@../../css/button.css" />
+            <PasswordField fx:id="fpassword" layoutX="162.0" layoutY="271.0" prefHeight="25.0" prefWidth="149.0" stylesheets="@../../css/button.css" />
             <Label layoutX="57.0" layoutY="110.0" text="First Name" />
             <Label layoutX="57.0" layoutY="169.0" text="Email" />
             <Label layoutX="57.0" layoutY="218.0" text="Num tel" />
@@ -33,12 +33,12 @@
             <Text fx:id="eemail" fill="#f50b0b" layoutX="162.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Email Invalid or you should add num phone" visible="false" wrappingWidth="160.13671875" />
             <Text fx:id="nome" fill="#f50b0b" layoutX="162.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*First Name Invalid or you should add your First Name" visible="false" wrappingWidth="160.13671875" />
             <Text fx:id="enom" fill="#f50b0b" layoutX="452.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Last Name Invalid or you should add your Last Name" visible="false" wrappingWidth="160.13671875" />
-            <Button fx:id="reset" layoutX="171.0" layoutY="398.0" mnemonicParsing="false" onAction="#resett" prefHeight="36.0" prefWidth="118.0" text="Reset" />
-            <Button fx:id="image" layoutX="465.0" layoutY="214.0" mnemonicParsing="false" onAction="#handle" prefHeight="25.0" prefWidth="134.0" text="Import Image" />
-            <TextField fx:id="age" layoutX="451.0" layoutY="165.0" />
+            <Button fx:id="reset" layoutX="171.0" layoutY="398.0" mnemonicParsing="false" onAction="#resett" prefHeight="36.0" prefWidth="118.0" stylesheets="@../../css/button.css" text="Reset" />
+            <Button fx:id="image" layoutX="465.0" layoutY="214.0" mnemonicParsing="false" onAction="#handle" prefHeight="33.0" prefWidth="160.0" stylesheets="@../../css/button.css" text="Import Image" />
+            <TextField fx:id="age" layoutX="451.0" layoutY="165.0" stylesheets="@../../css/button.css" />
             <Label layoutX="371.0" layoutY="169.0" text="Age" />
             <Text fx:id="eage" fill="#f50b0b" layoutX="452.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Age Invalid" visible="false" wrappingWidth="160.13671875" />
-            <ChoiceBox fx:id="choixrole" layoutX="457.0" layoutY="271.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="choixrole" layoutX="457.0" layoutY="271.0" prefWidth="150.0" stylesheets="@../../css/button.css" />
          </children>
       </AnchorPane>
    </children>

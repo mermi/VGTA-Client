@@ -16,7 +16,7 @@
       </ImageView>
       <AnchorPane layoutY="-8.0" prefHeight="489.0" prefWidth="815.0">
          <children>
-            <TableView fx:id="table" layoutX="74.0" layoutY="115.0" opacity="0.84" prefHeight="311.0" prefWidth="663.0">
+            <TableView fx:id="table" layoutX="74.0" layoutY="115.0" opacity="0.84" prefHeight="311.0" prefWidth="663.0" stylesheets="@../../css/button.css">
                <columns>
                   <TableColumn fx:id="lastNameCol" prefWidth="140.0" text="Last Name" />
                   <TableColumn fx:id="firstNameCol" prefWidth="142.0" text="First Name" />
@@ -33,7 +33,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="OkBtnID" layoutX="365.0" layoutY="442.0" mnemonicParsing="false" onAction="#OKBtnAction" opacity="0.8" prefHeight="25.0" prefWidth="55.0" text="OK" />
+            <Button fx:id="OkBtnID" layoutX="355.0" layoutY="442.0" mnemonicParsing="false" onAction="#OKBtnAction" opacity="0.8" prefHeight="33.0" prefWidth="76.0" stylesheets="@../../css/button.css" text="OK" />
          </children>
       </AnchorPane>
    </children>

@@ -25,9 +25,9 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="labelEvent" layoutX="140.0" layoutY="119.0" />
-            <Button layoutX="130.0" layoutY="191.0" mnemonicParsing="false" text="Send" />
-            <Button layoutX="228.0" layoutY="191.0" mnemonicParsing="false" text="Reset" />
+            <TextField fx:id="labelEvent" layoutX="140.0" layoutY="119.0" stylesheets="@../../css/button.css" />
+            <Button layoutX="130.0" layoutY="191.0" mnemonicParsing="false" stylesheets="@../../css/button.css" text="Send" />
+            <Button layoutX="228.0" layoutY="191.0" mnemonicParsing="false" stylesheets="@../../css/button.css" text="Reset" />
          </children>
       </Pane>
    </children>

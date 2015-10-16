@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayTeamOrganisationController">
+<AnchorPane fx:id="pane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayTeamOrganisationController">
    <children>
       <AnchorPane layoutX="-7.0" prefHeight="489.0" prefWidth="815.0">
          <children>
@@ -16,7 +16,7 @@
                   <Image url="@../../Images/background9.png" />
                </image>
             </ImageView>
-            <TableView fx:id="table" layoutX="78.0" layoutY="128.0" opacity="0.8" prefHeight="276.0" prefWidth="659.0">
+            <TableView fx:id="table" layoutX="78.0" layoutY="128.0" opacity="0.8" prefHeight="276.0" prefWidth="659.0" stylesheets="@../../css/button.css">
                <columns>
                   <TableColumn fx:id="lastNameCol" prefWidth="146.0" text="Last Name" />
                   <TableColumn fx:id="firstNameCol" prefWidth="138.0" text="First Name" />
@@ -29,9 +29,9 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button fx:id="addMemberBtnId" layoutX="268.0" layoutY="420.0" mnemonicParsing="false" onAction="#AddMemberBtnAction" opacity="0.8" prefHeight="38.0" prefWidth="98.0" text="Add member" />
-            <Button fx:id="deleteMemberBtnId" layoutX="426.0" layoutY="420.0" mnemonicParsing="false" onAction="#DeleteMemberBtnAction" opacity="0.85" prefHeight="38.0" prefWidth="108.0" text="Delete member" />
-            <Button fx:id="btnBach" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BtnBackAction" text="Back">
+            <Button fx:id="addMemberBtnId" layoutX="215.0" layoutY="420.0" mnemonicParsing="false" onAction="#AddMemberBtnAction" opacity="0.8" prefHeight="38.0" prefWidth="151.0" stylesheets="@../../css/button.css" text="Add member" />
+            <Button fx:id="deleteMemberBtnId" layoutX="426.0" layoutY="420.0" mnemonicParsing="false" onAction="#DeleteMemberBtnAction" opacity="0.85" prefHeight="38.0" prefWidth="151.0" stylesheets="@../../css/button.css" text="Delete member" />
+            <Button fx:id="btnBach" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BtnBackAction" stylesheets="@../../css/button.css" text="&lt;- Back">
                <font>
                   <Font size="13.0" />
                </font>

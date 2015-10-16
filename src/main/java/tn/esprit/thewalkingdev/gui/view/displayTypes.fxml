@@ -14,28 +14,29 @@
             <Image url="@../../Images/background2.png" />
          </image>
       </ImageView>
-      <TableView fx:id="tableView" layoutX="116.0" layoutY="107.0" prefHeight="200.0" prefWidth="302.0">
+      <TableView fx:id="tableView" layoutX="116.0" layoutY="107.0" prefHeight="200.0" prefWidth="302.0" stylesheets="@../../css/button.css">
          <columns>
             <TableColumn fx:id="idCl" prefWidth="75.0" text="C1" visible="false" />
             <TableColumn fx:id="typeCl" prefWidth="301.0" text="Type" />
          </columns>
       </TableView>
-      <Button fx:id="delete" layoutX="116.0" layoutY="352.0" mnemonicParsing="false" onAction="#deleteType" text="Delete selected Type" />
-      <Label layoutX="456.0" layoutY="75.0" text="Add a Type" textFill="#d30e0e">
+      <Button fx:id="delete" layoutX="47.0" layoutY="352.0" mnemonicParsing="false" onAction="#deleteType" stylesheets="@../../css/button.css" text="Delete selected Type" />
+      <Label layoutX="456.0" layoutY="108.0" text="Add a Type" textFill="#d30e0e">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTF" layoutX="638.0" layoutY="79.0" promptText="name of type" />
-      <Button fx:id="addB" layoutX="694.0" layoutY="124.0" mnemonicParsing="false" onAction="#add" text="Add" />
-      <Label layoutX="456.0" layoutY="207.0" text="Update a Type" textFill="#d30e0e">
+      <TextField fx:id="nameTF" layoutX="593.0" layoutY="106.0" promptText="name of type" stylesheets="@../../css/button.css" />
+      <Button fx:id="addB" layoutX="696.0" layoutY="164.0" mnemonicParsing="false" onAction="#add" stylesheets="@../../css/button.css" text="Add" />
+      <Label layoutX="440.0" layoutY="224.0" text="Update a Type" textFill="#d30e0e">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Button fx:id="update" layoutX="286.0" layoutY="352.0" mnemonicParsing="false" onAction="#updateTypeFromTable" text="Update selected Type" />
-      <TextField fx:id="nameTF1" layoutX="638.0" layoutY="211.0" promptText="name of type" />
-      <Button fx:id="updateB" layoutX="685.0" layoutY="255.0" mnemonicParsing="false" onAction="#update" text="Update" />
-      <Button fx:id="back" layoutX="40.0" layoutY="29.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Button fx:id="update" layoutX="286.0" layoutY="352.0" mnemonicParsing="false" onAction="#updateTypeFromTable" stylesheets="@../../css/button.css" text="Update selected Type" />
+      <TextField fx:id="nameTF1" layoutX="598.0" layoutY="221.0" promptText="name of type" stylesheets="@../../css/button.css" />
+      <Button fx:id="updateB" layoutX="683.0" layoutY="307.0" mnemonicParsing="false" onAction="#update" stylesheets="@../../css/button.css" text="Update" />
+      <Button fx:id="back" layoutX="40.0" layoutY="29.0" mnemonicParsing="false" onAction="#back" stylesheets="@../../css/button.css" text="&lt;- Back" />
+      <Button fx:id="search" layoutX="685.0" layoutY="369.0" mnemonicParsing="false" onAction="#search" stylesheets="@../../css/button.css" text="Search" />
    </children>
 </AnchorPane>

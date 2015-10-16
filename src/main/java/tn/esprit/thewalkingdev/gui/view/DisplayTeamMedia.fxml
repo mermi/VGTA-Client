@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayTeamMediaController">
+<AnchorPane fx:id="pane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayTeamMediaController">
    <children>
       <ImageView fx:id="imageViewId" fitHeight="519.0" fitWidth="830.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,11 +16,11 @@
       </ImageView>
       <AnchorPane layoutY="14.0" prefHeight="478.0" prefWidth="815.0">
          <children>
-            <TableView fx:id="table" layoutX="74.0" layoutY="110.0" opacity="0.82" prefHeight="270.0" prefWidth="667.0">
+            <TableView fx:id="table" layoutX="74.0" layoutY="110.0" opacity="0.82" prefHeight="270.0" prefWidth="667.0" stylesheets="@../../css/button.css">
                <columns>
                   <TableColumn fx:id="lastNameCol" prefWidth="164.0" text="Last Name" />
-                  <TableColumn fx:id="firstNameCol" prefWidth="120.0" text="First Name" />
-                  <TableColumn fx:id="roleCol" prefWidth="150.0" text="Role" />
+                  <TableColumn fx:id="firstNameCol" prefWidth="150.0" text="First Name" />
+                  <TableColumn fx:id="roleCol" prefWidth="120.0" text="Role" />
                   <TableColumn fx:id="emailCol" prefWidth="232.0" text="Email" />
                </columns>
             </TableView>
@@ -29,9 +29,9 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button fx:id="addMemberBtnId" layoutX="263.0" layoutY="407.0" mnemonicParsing="false" onAction="#AddMemberBtnAction" opacity="0.7" prefHeight="38.0" prefWidth="98.0" text="Add member" />
-            <Button fx:id="deleteMemberBtnId" layoutX="424.0" layoutY="407.0" mnemonicParsing="false" onAction="#DeleteMemberBtnAction" opacity="0.7" prefHeight="38.0" prefWidth="108.0" text="Delete member" />
-            <Button fx:id="btnBach" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#BtnBackAction" text="Back">
+            <Button fx:id="addMemberBtnId" layoutX="212.0" layoutY="407.0" mnemonicParsing="false" onAction="#AddMemberBtnAction" opacity="0.7" prefHeight="38.0" prefWidth="149.0" stylesheets="@../../css/button.css" text="Add member" />
+            <Button fx:id="deleteMemberBtnId" layoutX="424.0" layoutY="407.0" mnemonicParsing="false" onAction="#DeleteMemberBtnAction" opacity="0.7" prefHeight="38.0" prefWidth="149.0" stylesheets="@../../css/button.css" text="Delete member" />
+            <Button fx:id="btnBach" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#BtnBackAction" stylesheets="@../../css/button.css" text="&lt;- Back">
                <font>
                   <Font size="13.0" />
                </font>

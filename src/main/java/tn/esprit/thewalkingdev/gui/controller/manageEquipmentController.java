@@ -27,6 +27,7 @@ import tn.esprit.thewalkingdev.entites.Team;
 import tn.esprit.thewalkingdev.entites.TypeEquipment;
 import tn.esprit.thewalkingdev.gui.delegates.BrandDelegate;
 import tn.esprit.thewalkingdev.gui.delegates.EquipmentDelegate;
+import tn.esprit.thewalkingdev.gui.delegates.TeamCrudDelegate;
 import tn.esprit.thewalkingdev.gui.delegates.TypeEquipmentDelegate;
 
 public class manageEquipmentController implements Initializable,
@@ -79,10 +80,10 @@ public class manageEquipmentController implements Initializable,
 	@FXML
 	public void addEquipment(ActionEvent event) {
 		Equipment equipment = new Equipment();
-		/*Team team = new Team();
-		team.setId_team(1);
 		
-		equipment.setTeamLogistics(team);*/
+		
+		
+		
 		equipment.setBrand(brandCB.getValue());
 		equipment.setQuantity(Integer.parseInt(quantityField.getText()));
 		equipment.setTypeEquipment(typeCB.getValue());

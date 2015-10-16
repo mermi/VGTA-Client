@@ -7,34 +7,34 @@
 
 <AnchorPane prefHeight="489.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplaySponsorController">
    <children>
-      <TableView fx:id="tableView" layoutX="41.0" layoutY="45.0" prefHeight="131.0" prefWidth="397.0">
+      <TableView fx:id="tableView" layoutX="8.0" layoutY="45.0" prefHeight="131.0" prefWidth="789.0" stylesheets="@../../css/button.css">
         <columns>
             <TableColumn fx:id="ClNameSponsor" prefWidth="75.0" text="NameSponsor" />
           <TableColumn fx:id="ClIdSponsor" prefWidth="75.0" text="IdSponsor" visible="false" />
-          <TableColumn fx:id="ClNameContact" prefWidth="75.0" text="NameContact" />
-            <TableColumn fx:id="ClEmail" prefWidth="75.0" text="Email" />
-            <TableColumn fx:id="ClDateStart" prefWidth="85.0" text="Date Start" />
-            <TableColumn fx:id="CLDateEnd" prefWidth="86.0" text="DateEnd" />
+          <TableColumn fx:id="ClNameContact" prefWidth="251.0" text="NameContact" />
+            <TableColumn fx:id="ClEmail" minWidth="0.0" prefWidth="90.0" text="Email" />
+            <TableColumn fx:id="ClDateStart" prefWidth="203.0" text="Date Start" />
+            <TableColumn fx:id="CLDateEnd" prefWidth="165.0" text="DateEnd" />
         </columns>
       </TableView>
-      <Button fx:id="BtRemove" layoutX="48.0" layoutY="186.0" mnemonicParsing="false" onAction="#deleteSponsor" text="Remove" />
-      <Button fx:id="BtAdd" layoutX="367.0" layoutY="186.0" mnemonicParsing="false" onAction="#addsponsor" text="AddSponsor" />
+      <Button fx:id="BtRemove" layoutX="48.0" layoutY="186.0" mnemonicParsing="false" onAction="#deleteSponsor" stylesheets="@../../css/button.css" text="Remove" />
+      <Button fx:id="BtAdd" layoutX="367.0" layoutY="186.0" mnemonicParsing="false" onAction="#addsponsor" stylesheets="@../../css/button.css" text="AddSponsor" />
       <AnchorPane fx:id="PaneAddSpon" layoutX="456.0" layoutY="45.0" prefHeight="407.0" prefWidth="220.0" />
-      <Button fx:id="BtSend" layoutX="136.0" layoutY="186.0" mnemonicParsing="false" onAction="#Send" text="Send Mail" />
+      <Button fx:id="BtSend" layoutX="136.0" layoutY="186.0" mnemonicParsing="false" onAction="#Send" stylesheets="@../../css/button.css" text="Send Mail" />
       <AnchorPane fx:id="PanelMail" layoutX="41.0" layoutY="364.0" prefHeight="111.0" prefWidth="397.0">
          <children>
-            <Button fx:id="BtSendMail" layoutX="333.0" layoutY="63.0" mnemonicParsing="false" onAction="#SendMail" text="Send" />
-            <TextArea fx:id="taMail" layoutX="14.0" layoutY="22.0" prefHeight="64.0" prefWidth="294.0" />
+            <Button fx:id="BtSendMail" layoutX="333.0" layoutY="63.0" mnemonicParsing="false" onAction="#SendMail" stylesheets="@../../css/button.css" text="Send" />
+            <TextArea fx:id="taMail" layoutX="14.0" layoutY="22.0" prefHeight="64.0" prefWidth="294.0" stylesheets="@../../css/button.css" />
          </children></AnchorPane>
-      <Button fx:id="BtshowUpdate" layoutX="261.0" layoutY="186.0" mnemonicParsing="false" onAction="#BtshowUpdate" text="Update" />
+      <Button fx:id="BtshowUpdate" layoutX="261.0" layoutY="186.0" mnemonicParsing="false" onAction="#BtshowUpdate" stylesheets="@../../css/button.css" text="Update" />
       <AnchorPane fx:id="PanelUpdate" layoutX="48.0" layoutY="219.0" prefHeight="163.0" prefWidth="397.0">
          <children>
-            <TextField fx:id="tfupnamesp" layoutX="7.0" layoutY="33.0" />
-            <TextField fx:id="tfupemail" layoutX="234.0" layoutY="82.0" />
-            <TextField fx:id="tfupnamectsp" layoutX="234.0" layoutY="33.0" />
-            <DatePicker fx:id="dtupstartcont" layoutX="14.0" layoutY="106.0" prefHeight="25.0" prefWidth="69.0" />
-            <DatePicker fx:id="dtupendcont" layoutX="105.0" layoutY="106.0" prefHeight="25.0" prefWidth="59.0" />
-            <Button fx:id="btupdateSpon" layoutX="319.0" layoutY="119.0" mnemonicParsing="false" onAction="#btupdateSpon" text="Update" />
+            <TextField fx:id="tfupnamesp" layoutX="7.0" layoutY="33.0" stylesheets="@../../css/button.css" />
+            <TextField fx:id="tfupemail" layoutX="234.0" layoutY="82.0" stylesheets="@../../css/button.css" />
+            <TextField fx:id="tfupnamectsp" layoutX="234.0" layoutY="33.0" stylesheets="@../../css/button.css" />
+            <DatePicker fx:id="dtupstartcont" layoutX="14.0" layoutY="106.0" prefHeight="25.0" prefWidth="69.0" stylesheets="@../../css/button.css" />
+            <DatePicker fx:id="dtupendcont" layoutX="105.0" layoutY="106.0" prefHeight="25.0" prefWidth="59.0" stylesheets="@../../css/button.css" />
+            <Button fx:id="btupdateSpon" layoutX="322.0" layoutY="127.0" mnemonicParsing="false" onAction="#btupdateSpon" stylesheets="@../../css/button.css" text="Update" />
             <Label layoutX="9.0" layoutY="14.0" prefHeight="17.0" prefWidth="149.0" text="Name Sponsor" />
             <Label layoutX="234.0" layoutY="14.0" text="Name Contact Sponsor" />
             <Label layoutX="234.0" layoutY="65.0" text="Email " />

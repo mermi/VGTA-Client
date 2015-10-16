@@ -18,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.TextField;
@@ -27,6 +28,8 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 public class addGamerController extends Application {
+	@FXML
+	private AnchorPane pane;
 	@FXML
 	private Button image;
 	@FXML

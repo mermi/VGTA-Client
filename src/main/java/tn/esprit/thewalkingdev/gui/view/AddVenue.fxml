@@ -18,14 +18,14 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="labelField" layoutX="103.0" layoutY="96.0" />
+      <TextField fx:id="labelField" layoutX="103.0" layoutY="96.0" stylesheets="@../../css/button.css" />
       <Label layoutX="39.0" layoutY="154.0" text="Address: ">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="addressField" layoutX="103.0" layoutY="151.0" />
-      <Button fx:id="addVenue" layoutX="103.0" layoutY="221.0" mnemonicParsing="false" onAction="#addVenue" text="Add" />
-      <Button layoutX="195.0" layoutY="221.0" mnemonicParsing="false" text="Cancel" />
+      <TextField fx:id="addressField" layoutX="103.0" layoutY="151.0" stylesheets="@../../css/button.css" />
+      <Button fx:id="addVenue" layoutX="103.0" layoutY="221.0" mnemonicParsing="false" onAction="#addVenue" stylesheets="@../../css/button.css" text="Add" />
+      <Button layoutX="195.0" layoutY="221.0" mnemonicParsing="false" stylesheets="@../../css/button.css" text="Cancel" />
    </children>
 </AnchorPane>

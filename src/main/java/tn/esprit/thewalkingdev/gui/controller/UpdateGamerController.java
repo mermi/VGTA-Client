@@ -20,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.control.TextField;
 import javafx.application.Application;
@@ -29,6 +30,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class UpdateGamerController extends Application implements Initializable {
+	@FXML
+	private AnchorPane pane;
 	@FXML
 	private Button add;
 	@FXML

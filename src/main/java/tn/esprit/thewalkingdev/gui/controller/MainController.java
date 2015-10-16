@@ -30,6 +30,8 @@ public class MainController extends Application implements Initializable,
 	@FXML
 	private Button stat;
 	@FXML
+	private Button viewMedia;
+	@FXML
 	private Button viewEvent;
 	@FXML
 	private Button viewgamerr;
@@ -56,6 +58,14 @@ public class MainController extends Application implements Initializable,
 		Node node;
 		node = (Node) FXMLLoader.load(getClass().getResource(
 				DisplayEquipmentScreen));
+		pane.getChildren().add(node);
+	}
+	@FXML
+	public void viewMedia(ActionEvent event) throws IOException {
+		pane.getChildren().clear();
+		Node node;
+		node = (Node) FXMLLoader.load(getClass().getResource(
+				"/tn/esprit/thewalkingdev/gui/view/displayAllArticles.FXML"));
 		pane.getChildren().add(node);
 	}
 

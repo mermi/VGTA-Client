@@ -2,6 +2,7 @@ package tn.esprit.thewalkingdev.gui.delegates;
 
 import java.util.List;
 
+import tn.esprit.thewalkingdev.entites.Brand;
 import tn.esprit.thewalkingdev.entites.TypeEquipment;
 import tn.esprit.thewalkingdev.gui.utils.ServicesLocator;
 import tn.esprit.thewalkingdev.services.contract.TypeEquipmentDAORemote;
@@ -31,5 +32,8 @@ public class TypeEquipmentDelegate {
 	}
 	public static TypeEquipment findBrandById(Integer idTypeEquipment){
 		return getProxy().findTypeEquipmentById(idTypeEquipment);
+	}
+	public static List<TypeEquipment> search(String keyword){
+		return getProxy().search(keyword);
 	}
 }

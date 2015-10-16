@@ -16,11 +16,11 @@
       </ImageView>
       <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="489.0" prefWidth="815.0">
          <children>
-            <TableView fx:id="table" layoutX="75.0" layoutY="109.0" opacity="0.77" prefHeight="292.0" prefWidth="666.0">
+            <TableView fx:id="table" layoutX="75.0" layoutY="109.0" opacity="0.77" prefHeight="292.0" prefWidth="666.0" stylesheets="@../../css/button.css">
                <columns>
                   <TableColumn fx:id="lastNameCol" prefWidth="140.0" text="Last Name" />
-                  <TableColumn fx:id="firstNameCol" prefWidth="131.0" text="First Name" />
-                  <TableColumn fx:id="emailCol" prefWidth="231.0" text="Email" />
+                  <TableColumn fx:id="firstNameCol" prefWidth="157.0" text="First Name" />
+                  <TableColumn fx:id="emailCol" prefWidth="205.0" text="Email" />
                   <TableColumn fx:id="roleCol" prefWidth="163.0" text="Role" />
                </columns>
             </TableView>
@@ -33,7 +33,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="OkBtnID" layoutX="370.0" layoutY="427.0" mnemonicParsing="false" onAction="#OKBtnAction" opacity="0.78" prefHeight="25.0" prefWidth="55.0" text="OK" />
+            <Button fx:id="OkBtnID" layoutX="367.0" layoutY="424.0" mnemonicParsing="false" onAction="#OKBtnAction" opacity="0.78" prefHeight="33.0" prefWidth="83.0" stylesheets="@../../css/button.css" text="OK" />
          </children>
       </AnchorPane>
    </children>

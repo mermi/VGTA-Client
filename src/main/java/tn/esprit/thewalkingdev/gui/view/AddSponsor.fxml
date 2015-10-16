@@ -8,10 +8,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="220.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.AddSponsorController">
    <children>
-      <Button fx:id="btAddSponsor" layoutX="127.0" layoutY="368.0" mnemonicParsing="false" onAction="#AddSponsor" text="Add Sponsor" />
-      <TextField fx:id="tfnamesponsor" layoutX="36.0" layoutY="70.0" prefHeight="25.0" prefWidth="150.0" />
-      <TextField fx:id="tfnamecontactsponsor" layoutX="36.0" layoutY="143.0" prefHeight="25.0" prefWidth="150.0" />
-      <TextField fx:id="tfemail" layoutX="36.0" layoutY="197.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button fx:id="btAddSponsor" layoutX="45.0" layoutY="368.0" mnemonicParsing="false" onAction="#AddSponsor" stylesheets="@../../css/button.css" text="Add Sponsor" />
+      <TextField fx:id="tfnamesponsor" layoutX="36.0" layoutY="62.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@../../css/button.css" />
+      <TextField fx:id="tfnamecontactsponsor" layoutX="36.0" layoutY="135.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@../../css/button.css" />
+      <TextField fx:id="tfemail" layoutX="35.0" layoutY="191.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@../../css/button.css" />
       <Label layoutX="37.0" layoutY="45.0" text="Name Sponsor" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
@@ -32,8 +32,8 @@
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font></Label>
-      <DatePicker fx:id="dateStart" layoutX="36.0" layoutY="266.0" prefHeight="25.0" prefWidth="150.0" />
-      <DatePicker fx:id="dateEnd" layoutX="35.0" layoutY="324.0" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="dateStart" layoutX="36.0" layoutY="258.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@../../css/button.css" />
+      <DatePicker fx:id="dateEnd" layoutX="35.0" layoutY="323.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@../../css/button.css" />
       <Label layoutX="54.0" layoutY="4.0" prefHeight="20.0" prefWidth="113.0" text="Add Sponsor" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial Bold Italic" size="16.0" />
