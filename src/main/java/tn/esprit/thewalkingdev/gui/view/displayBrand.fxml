@@ -14,29 +14,29 @@
             <Image url="@../../Images/background2.png" />
          </image>
       </ImageView>
-      <TableView fx:id="tableView" layoutX="106.0" layoutY="97.0" prefHeight="200.0" prefWidth="302.0">
+      <TableView fx:id="tableView" layoutX="106.0" layoutY="97.0" prefHeight="200.0" prefWidth="302.0" stylesheets="@../../css/button.css">
          <columns>
             <TableColumn fx:id="idCl" prefWidth="75.0" text="C1" visible="false" />
             <TableColumn fx:id="brandCl" prefWidth="301.0" text="Brand" />
          </columns>
       </TableView>
-      <Button fx:id="delete" layoutX="106.0" layoutY="342.0" mnemonicParsing="false" onAction="#deleteBrand" text="Delete selected Brand" />
-      <Label layoutX="446.0" layoutY="65.0" text="Add a brand" textFill="#d30e0e">
+      <Button fx:id="delete" layoutX="24.0" layoutY="375.0" mnemonicParsing="false" onAction="#deleteBrand" stylesheets="@../../css/button.css" text="Delete selected Brand" />
+      <Label layoutX="446.0" layoutY="99.0" text="Add a brand" textFill="#d30e0e">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="nameTF" layoutX="628.0" layoutY="69.0" promptText="name of brand" />
-      <Button fx:id="addB" layoutX="684.0" layoutY="114.0" mnemonicParsing="false" onAction="#add" text="Add" />
-      <Label layoutX="446.0" layoutY="197.0" text="Update a brand" textFill="#d30e0e">
+      <TextField fx:id="nameTF" layoutX="581.0" layoutY="97.0" promptText="name of brand" stylesheets="@../../css/button.css" />
+      <Button fx:id="addB" layoutX="633.0" layoutY="152.0" mnemonicParsing="false" onAction="#add" prefHeight="33.0" prefWidth="92.0" stylesheets="@../../css/button.css" text="Add" />
+      <Label layoutX="429.0" layoutY="220.0" text="Update a brand" textFill="#d30e0e">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Button fx:id="update" layoutX="276.0" layoutY="342.0" mnemonicParsing="false" onAction="#updateBrandFromTable" text="Update selected Brand" />
-      <TextField fx:id="nameTF1" layoutX="628.0" layoutY="201.0" promptText="name of brand" />
-      <Button fx:id="updateB" layoutX="675.0" layoutY="245.0" mnemonicParsing="false" onAction="#update" text="Update" />
-      <Button fx:id="back" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" text="Back" />
-      <Button fx:id="search" layoutX="677.0" layoutY="306.0" mnemonicParsing="false" onAction="#search" text="Search" />
+      <Button fx:id="update" layoutX="310.0" layoutY="375.0" mnemonicParsing="false" onAction="#updateBrandFromTable" stylesheets="@../../css/button.css" text="Update selected Brand" />
+      <TextField fx:id="nameTF1" layoutX="595.0" layoutY="218.0" promptText="name of brand" stylesheets="@../../css/button.css" />
+      <Button fx:id="updateB" layoutX="639.0" layoutY="281.0" mnemonicParsing="false" onAction="#update" stylesheets="@../../css/button.css" text="Update" />
+      <Button fx:id="back" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" stylesheets="@../../css/button.css" text="&lt;- Back" />
+      <Button fx:id="search" layoutX="641.0" layoutY="375.0" mnemonicParsing="false" onAction="#search" stylesheets="@../../css/button.css" text="Search" />
    </children>
 </AnchorPane>

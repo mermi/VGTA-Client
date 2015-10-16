@@ -18,24 +18,24 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import tn.esprit.thewalkingdev.entites.Brand;
+import tn.esprit.thewalkingdev.entites.TypeEquipment;
 import tn.esprit.thewalkingdev.gui.delegates.BrandDelegate;
+import tn.esprit.thewalkingdev.gui.delegates.TypeEquipmentDelegate;
 
-public class searchBrandController implements Initializable {
-	@FXML
-	private AnchorPane pane;
+public class SearchTypeController implements Initializable  {
 	@FXML
 	private TextField filterField;
 	@FXML
-	private TableView<Brand> table;
+	private AnchorPane pane;
 	@FXML
-	private TableColumn<Brand, Integer> idCl;
+	private TableView<TypeEquipment> table;
+	@FXML
+	private TableColumn<TypeEquipment, Integer> idCl;
+	@FXML
+	private TableColumn<TypeEquipment, String> typeCl;
 	@FXML
 	private Button back;
-	@FXML
-	private TableColumn<Brand, String> brandCl;
-
-	private ObservableList<Brand> list = FXCollections.observableArrayList();
+	private ObservableList<TypeEquipment> list = FXCollections.observableArrayList();
 
 	// Event Listener on TextField[#filterField].onKeyReleased
 	@FXML
@@ -46,35 +46,35 @@ public class searchBrandController implements Initializable {
 		}
 		list.clear();
 		String keyword = filterField.getText();
-		BrandDelegate.search(keyword).stream()
+		TypeEquipmentDelegate.search(keyword).stream()
 				.forEach((brand) -> list.add(brand));
 		table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-		idCl.setCellValueFactory(new PropertyValueFactory<>("idMarque"));
-		brandCl.setCellValueFactory(new PropertyValueFactory<>("label"));
+		idCl.setCellValueFactory(new PropertyValueFactory<>("id"));
+		typeCl.setCellValueFactory(new PropertyValueFactory<>("typeEq"));
 
 		table.setItems(list);
 	}
-
+	// Event Listener on Button[#back].onAction
+	@FXML
 	public void back(ActionEvent event) throws IOException {
 		pane.getChildren().clear();
 		Node node;
 		node = (Node) FXMLLoader.load(getClass().getResource(
-				"/tn/esprit/thewalkingdev/gui/view/displayBrand.FXML"));
+				"/tn/esprit/thewalkingdev/gui/view/displayTypes.FXML"));
 		pane.getChildren().add(node);
-
 	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		display();
+		
 	}
-
 	public void display() {
-		BrandDelegate.displayBrands().stream().forEach(a -> list.add(a));
+		TypeEquipmentDelegate.displayTypeEquipments().stream().forEach(a -> list.add(a));
 		table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 		// tableView.setTableMenuButtonVisible(true);
-		idCl.setCellValueFactory(new PropertyValueFactory<>("idMarque"));
+		idCl.setCellValueFactory(new PropertyValueFactory<>("id"));
 
-		brandCl.setCellValueFactory(new PropertyValueFactory<>("label"));
+		typeCl.setCellValueFactory(new PropertyValueFactory<>("typeEq"));
 
 		table.setItems(list);
 

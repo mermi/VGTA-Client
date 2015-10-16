@@ -14,12 +14,13 @@
          </image>
       </ImageView>
       <AnchorPane fx:id="pane" layoutX="236.0" layoutY="100.0" prefHeight="489.0" prefWidth="815.0" />
-      <Button fx:id="viewLog" layoutX="-1.0" layoutY="516.0" mnemonicParsing="false" onAction="#viewLogistics" opacity="0.0" prefHeight="85.0" prefWidth="227.0" />
-      <Button fx:id="stat" layoutX="849.0" layoutY="50.0" mnemonicParsing="false" onAction="#stat" text="Statistiques" />
-   	<Button fx:id="viewEvent" layoutX="-1.0" layoutY="270.0" mnemonicParsing="false" onAction="#viewEvent" opacity="0.0" prefHeight="85.0" prefWidth="227.0" />
-      <Button fx:id="viewgamerr" layoutX="-1.0" layoutY="185.0" mnemonicParsing="false" onAction="#viewgamer" opacity="0.0" prefHeight="85.0" prefWidth="227.0" />
+      <Button fx:id="viewLog" layoutX="23.0" layoutY="482.0" mnemonicParsing="false" onAction="#viewLogistics" opacity="0.0" prefHeight="40.0" prefWidth="178.0" />
+      <Button fx:id="stat" layoutX="585.0" layoutY="36.0" mnemonicParsing="false" onAction="#stat" opacity="0.0" prefHeight="50.0" prefWidth="194.0" />
+   	<Button fx:id="viewEvent" layoutX="23.0" layoutY="429.0" mnemonicParsing="false" onAction="#viewEvent" opacity="0.0" prefHeight="40.0" prefWidth="185.0" />
+      <Button fx:id="viewgamerr" layoutX="23.0" layoutY="220.0" mnemonicParsing="false" onAction="#viewgamer" opacity="0.0" prefHeight="40.0" prefWidth="185.0" />
       <Hyperlink fx:id="deconnexion" layoutX="963.0" layoutY="51.0" onAction="#deco" text="Deconnexion" />
-      <Button fx:id="btnteam" layoutX="-1.0" layoutY="431.0" mnemonicParsing="false" onAction="#TeamBtnAction" opacity="0.0" prefHeight="85.0" prefWidth="227.0" />
-   	<Button fx:id="viewSpon" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#viewSponsors" opacity="0.0" prefHeight="73.0" prefWidth="203.0" />
+      <Button fx:id="btnteam" layoutX="23.0" layoutY="273.0" mnemonicParsing="false" onAction="#TeamBtnAction" opacity="0.0" prefHeight="40.0" prefWidth="185.0" />
+   	<Button fx:id="viewSpon" layoutX="23.0" layoutY="323.0" mnemonicParsing="false" onAction="#viewSponsors" opacity="0.0" prefHeight="50.0" prefWidth="185.0" />
+      <Button fx:id="viewMedia" layoutX="20.0" layoutY="375.0" mnemonicParsing="false" onAction="#viewMedia" opacity="0.0" prefHeight="40.0" prefWidth="185.0" />
    </children>
 </AnchorPane>

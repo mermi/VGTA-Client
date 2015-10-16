@@ -16,15 +16,15 @@
       </ImageView>
       <AnchorPane layoutX="-2.0" layoutY="8.0" prefHeight="491.0" prefWidth="758.0">
          <children>
-            <TableView fx:id="table" layoutX="67.0" layoutY="122.0" opacity="0.76" prefHeight="311.0" prefWidth="673.0">
+            <TableView fx:id="table" layoutX="67.0" layoutY="122.0" opacity="0.76" prefHeight="311.0" prefWidth="673.0" stylesheets="@../../css/button.css">
                <columns>
                   <TableColumn fx:id="lastNameCol" prefWidth="140.0" text="Last Name" />
-                  <TableColumn fx:id="firstNameCol" prefWidth="131.0" text="First Name" />
-                  <TableColumn fx:id="emailCol" prefWidth="135.0" text="Email" />
-                  <TableColumn fx:id="roleCol" prefWidth="136.0" text="Role" />
+                  <TableColumn fx:id="firstNameCol" prefWidth="151.0" text="First Name" />
+                  <TableColumn fx:id="emailCol" prefWidth="167.0" text="Email" />
+                  <TableColumn fx:id="roleCol" prefWidth="84.0" text="Role" />
                </columns>
             </TableView>
-            <Button fx:id="OkBtnID" layoutX="376.0" layoutY="441.0" mnemonicParsing="false" onAction="#OKBtnAction" opacity="0.83" prefHeight="25.0" prefWidth="55.0" text="OK" />
+            <Button fx:id="OkBtnID" layoutX="354.0" layoutY="444.0" mnemonicParsing="false" onAction="#OKBtnAction" opacity="0.83" prefHeight="33.0" prefWidth="107.0" stylesheets="@../../css/button.css" text="OK" />
             <Pane layoutY="14.0" prefHeight="95.0" prefWidth="815.0">
                <children>
                   <Label layoutX="164.0" layoutY="25.0" text="ADD A MEMBER IN TEAM LOGISTIC" textFill="#00ffb4">

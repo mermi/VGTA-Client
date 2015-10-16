@@ -14,21 +14,30 @@
             <Image url="@../../Images/background2.png" />
          </image>
       </ImageView>
-      <Button fx:id="add" layoutX="654.0" layoutY="291.0" mnemonicParsing="false" onAction="#addEquipment" text="Add Equipment" />
-      <Button fx:id="backB" layoutX="26.0" layoutY="29.0" mnemonicParsing="false" onAction="#back" text="Back" />
-      <TextField fx:id="quantityField" layoutX="629.0" layoutY="126.0" />
-      <Label fx:id="quantity" layoutX="517.0" layoutY="133.0" text="Quantity" textFill="#dd0909" />
-      <Label fx:id="brand" layoutX="524.0" layoutY="186.0" text="Brand" textFill="#e11818" />
-      <Label fx:id="type" layoutX="527.0" layoutY="243.0" text="Type" textFill="#e41717" />
-      <ComboBox fx:id="brandCB" layoutX="629.0" layoutY="179.0" prefWidth="150.0" promptText="Brand" />
-      <ComboBox fx:id="typeCB" layoutX="629.0" layoutY="236.0" prefWidth="150.0" promptText="Type" />
-      <Label layoutX="344.0" layoutY="41.0" text="Add Equipment" textFill="#ee1818">
+      <Button fx:id="add" layoutX="614.0" layoutY="288.0" mnemonicParsing="false" onAction="#addEquipment" stylesheets="@../../css/button.css" text="Add Equipment" />
+      <Button fx:id="backB" layoutX="26.0" layoutY="29.0" mnemonicParsing="false" onAction="#back" stylesheets="@../../css/button.css" text="&lt;- Back" />
+      <TextField fx:id="quantityField" layoutX="585.0" layoutY="123.0" stylesheets="@../../css/button.css" />
+      <Label fx:id="quantity" layoutX="503.0" layoutY="126.0" text="Quantity" textFill="#dd0909">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="brand" layoutX="510.0" layoutY="179.0" text="Brand" textFill="#e11818">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="type" layoutX="513.0" layoutY="236.0" text="Type" textFill="#e41717">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ComboBox fx:id="brandCB" layoutX="613.0" layoutY="180.0" prefWidth="150.0" promptText="Brand" stylesheets="@../../css/button.css" />
+      <ComboBox fx:id="typeCB" layoutX="613.0" layoutY="237.0" prefWidth="150.0" promptText="Type" stylesheets="@../../css/button.css" />
+      <Label layoutX="269.0" layoutY="29.0" text="Manage Equipment" textFill="#ee1818">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Button fx:id="update" layoutX="646.0" layoutY="349.0" mnemonicParsing="false" onAction="#updateEquipment" text="Update Equipment" />
-      <TableView fx:id="table" layoutX="46.0" layoutY="103.0" prefHeight="304.0" prefWidth="440.0">
+      <Button fx:id="update" layoutX="604.0" layoutY="346.0" mnemonicParsing="false" onAction="#updateEquipment" stylesheets="@../../css/button.css" text="Update Equipment" />
+      <TableView fx:id="table" layoutX="46.0" layoutY="103.0" prefHeight="304.0" prefWidth="440.0" stylesheets="@../../css/button.css">
         <columns>
           <TableColumn fx:id="idCl" prefWidth="75.0" text="id" visible="false" />
           <TableColumn fx:id="quantityCl" prefWidth="140.0" text="Quantity" />
@@ -36,7 +45,7 @@
             <TableColumn fx:id="typeCl" prefWidth="150.0" text="Type" />
         </columns>
       </TableView>
-      <Button fx:id="updateEqui" layoutX="323.0" layoutY="437.0" mnemonicParsing="false" onAction="#updateFromTable" text="Update selected equipment" />
-      <Button fx:id="delete" layoutX="46.0" layoutY="437.0" mnemonicParsing="false" onAction="#delete" text="Delete selected equipment" />
+      <Button fx:id="updateEqui" layoutX="276.0" layoutY="437.0" mnemonicParsing="false" onAction="#updateFromTable" stylesheets="@../../css/button.css" text="Update selected equipment" />
+      <Button fx:id="delete" layoutX="26.0" layoutY="437.0" mnemonicParsing="false" onAction="#delete" stylesheets="@../../css/button.css" text="Delete selected equipment" />
    </children>
 </AnchorPane>

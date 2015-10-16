@@ -13,10 +13,10 @@
             <Image url="@../../Images/background2.png" />
          </image>
       </ImageView>
-      <Button fx:id="addbrandB" layoutX="629.0" layoutY="178.0" mnemonicParsing="false" onAction="#addBrand" prefHeight="25.0" prefWidth="125.0" stylesheets="@../../css/button.css" text="Manage brands" />
-      <Button fx:id="addEquipmentB" layoutX="627.0" layoutY="111.0" mnemonicParsing="false" onAction="#addEquipment" stylesheets="@../../css/button.css" text="Manage Equipments" />
-      <Button fx:id="delete" layoutX="220.0" layoutY="424.0" mnemonicParsing="false" onAction="#deleteEquipment" stylesheets="@../../css/button.css" text="Delete selected Equipment" />
-      <TableView fx:id="tableView" layoutX="41.0" layoutY="32.0" prefHeight="375.0" prefWidth="519.0" stylesheets="@../../css/tableView.css">
+      <Button fx:id="addbrandB" layoutX="598.0" layoutY="203.0" mnemonicParsing="false" onAction="#addBrand" prefHeight="33.0" prefWidth="182.0" stylesheets="@../../css/button.css" text="Manage brands" />
+      <Button fx:id="addEquipmentB" layoutX="596.0" layoutY="136.0" mnemonicParsing="false" onAction="#addEquipment" stylesheets="@../../css/button.css" text="Manage Equipments" />
+      <Button fx:id="delete" layoutX="190.0" layoutY="424.0" mnemonicParsing="false" onAction="#deleteEquipment" stylesheets="@../../css/button.css" text="Delete selected Equipment" />
+      <TableView fx:id="tableView" layoutX="41.0" layoutY="32.0" opacity="0.62" prefHeight="375.0" prefWidth="519.0" stylesheets="@../../css/button.css">
         <columns>
           <TableColumn fx:id="idCl" prefWidth="75.0" text="C1" visible="false" />
           <TableColumn fx:id="quantityCl" prefWidth="170.0" text="Quantity" />
@@ -24,6 +24,6 @@
             <TableColumn fx:id="TypeCl" prefWidth="197.0" text="Type" />
         </columns>
       </TableView>
-      <Button fx:id="manageTypeB" layoutX="627.0" layoutY="245.0" mnemonicParsing="false" onAction="#manageTypes" prefHeight="25.0" prefWidth="125.0" stylesheets="@../../css/button.css" text="Manage Types" />
+      <Button fx:id="manageTypeB" layoutX="596.0" layoutY="270.0" mnemonicParsing="false" onAction="#manageTypes" prefHeight="33.0" prefWidth="182.0" stylesheets="@../../css/button.css" text="Manage Types" />
    </children>
 </AnchorPane>

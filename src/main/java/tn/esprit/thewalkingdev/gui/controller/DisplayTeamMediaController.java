@@ -22,10 +22,13 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class DisplayTeamMediaController extends Application implements
 		Initializable {
+	@FXML
+	private AnchorPane pane;
 	@FXML
 	private TableColumn lastNameCol = new TableColumn("Last Name");
 	@FXML
@@ -54,13 +57,12 @@ public class DisplayTeamMediaController extends Application implements
 	@FXML
 	public void BtnBackAction(ActionEvent event) {
 		try {
-			Parent pageTeamLogistic = FXMLLoader.load(getClass().getResource(
+			pane.getChildren().clear();
+			Node node;
+			node = (Node) FXMLLoader.load(getClass().getResource(
 					"/tn/esprit/thewalkingdev/gui/view/DisplayTeams.fxml"));
-			Scene scene = new Scene(pageTeamLogistic);
-			Stage ad = (Stage) ((Node) event.getSource()).getScene()
-					.getWindow();
-			ad.setScene(scene);
-			ad.show();
+			pane.getChildren().add(node);
+					
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -72,13 +74,12 @@ public class DisplayTeamMediaController extends Application implements
 	@FXML
 	public void AddMemberBtnAction(ActionEvent event) {
 		try {
-			Parent pageTeamLogistic = FXMLLoader.load(getClass().getResource(
+			pane.getChildren().clear();
+			Node node;
+			node = (Node) FXMLLoader.load(getClass().getResource(
 					"/tn/esprit/thewalkingdev/gui/view/AddMemberInMedia.fxml"));
-			Scene scene = new Scene(pageTeamLogistic);
-			Stage ad = (Stage) ((Node) event.getSource()).getScene()
-					.getWindow();
-			ad.setScene(scene);
-			ad.show();
+			pane.getChildren().add(node);
+					
 
 		} catch (IOException e) {
 			e.printStackTrace();

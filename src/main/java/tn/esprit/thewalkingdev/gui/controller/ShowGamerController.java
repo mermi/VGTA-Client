@@ -59,6 +59,7 @@ import javafx.scene.effect.ImageInput;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -68,6 +69,8 @@ import javafx.util.Callback;
 import javafx.util.StringConverter;
 
 public class ShowGamerController extends Application implements Initializable {
+	@FXML
+	private AnchorPane pane;
 	public static Gamer gam = new Gamer();
 	public boolean issearch = false;
 	public boolean isshow;
@@ -79,12 +82,13 @@ public class ShowGamerController extends Application implements Initializable {
 
 	@FXML
 	public void addnew(ActionEvent event) throws IOException {
-		Parent page_acceuil = FXMLLoader.load(getClass().getResource(
+		pane.getChildren().clear();
+		Node node;
+		node = (Node) FXMLLoader.load(getClass().getResource(
 				"/tn/esprit/thewalkingdev/gui/view/Addadmin.fxml"));
-		Scene scene = new Scene(page_acceuil);
-		Stage ad = (Stage) (((Node) event.getSource()).getScene().getWindow());
-		ad.setScene(scene);
-		ad.show();
+		pane.getChildren().add(node);
+
+				
 	}
 
 	@FXML
@@ -138,13 +142,12 @@ public class ShowGamerController extends Application implements Initializable {
 	@FXML
 	private void ajoutAction(ActionEvent actionEvent) {
 		try {
-			Parent page_ajout = FXMLLoader.load(getClass().getResource(
+			pane.getChildren().clear();
+			Node node;
+			node = (Node) FXMLLoader.load(getClass().getResource(
 					"/tn/esprit/thewalkingdev/gui/view/addGamer.fxml"));
-			Scene scene = new Scene(page_ajout);
-			Stage ad = (Stage) (((Node) actionEvent.getSource()).getScene()
-					.getWindow());
-			ad.setScene(scene);
-			ad.show();
+			pane.getChildren().add(node);
+				
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -31,6 +31,8 @@ public class DisplayTypesController implements Initializable, ControlledScreen {
 	@FXML
 	private Button back;
 	@FXML
+	private Button search;
+	@FXML
 	private TableView<TypeEquipment> tableView;
 	@FXML
 	private TableColumn<TypeEquipment, Integer> idCl;
@@ -59,6 +61,14 @@ public class DisplayTypesController implements Initializable, ControlledScreen {
 		Node node;
 		node = (Node) FXMLLoader.load(getClass().getResource(
 				"/tn/esprit/thewalkingdev/gui/view/afficheEquipment.FXML"));
+		pane.getChildren().add(node);
+
+	}
+	public void search(ActionEvent event) throws IOException {
+		pane.getChildren().clear();
+		Node node;
+		node = (Node) FXMLLoader.load(getClass().getResource(
+				"/tn/esprit/thewalkingdev/gui/view/searchType.FXML"));
 		pane.getChildren().add(node);
 
 	}

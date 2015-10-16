@@ -11,7 +11,7 @@ public class ArticleCrudDelegate {
 	static ArticleRemote eventService = (ArticleRemote) ServicesLocator
 			.getInstance()
 			.getProxy(
-					"VGTA/ArticleCrud!tn.esprit.thewalkingdev.services.contract.ArticleRemote");
+					"vgta/ArticleCrud!tn.esprit.thewalkingdev.services.contract.ArticleRemote");
 	
 	public static void doAddArticle(Article article){
 		eventService.addArticle(article);

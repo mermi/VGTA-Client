@@ -62,7 +62,7 @@ public class PieChartSample extends Application implements Runnable {
         chart.setClockwise(false);
         
         p.setCenter(chart);
-        chart.setTitle("Nombre de Gamer par team");
+        chart.setTitle("Nombre de Gamer par Team");
         chart.setAnimated(true);
         chart.setMaxSize(400, 400);
         chart.setLabelsVisible(true);
@@ -70,7 +70,7 @@ public class PieChartSample extends Application implements Runnable {
         primaryStage.setScene(s);
         primaryStage.setWidth(600);
         primaryStage.setHeight(600);
-        primaryStage.setTitle("Nombre de comptes");
+        primaryStage.setTitle("Nombre de Gamer par Team");
         primaryStage.initStyle(StageStyle.DECORATED);
 //                primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
         primaryStage.show();
