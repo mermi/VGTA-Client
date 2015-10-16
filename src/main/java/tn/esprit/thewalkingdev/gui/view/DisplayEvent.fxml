@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.thewalkingdev.gui.controller.DisplayEventController">
+   <children>
+      <Button fx:id="addEvent" layoutX="676.0" layoutY="375.0" mnemonicParsing="false" onAction="#addEvent" stylesheets="@../../css/button.css" text="Add Event" />
+      <Button fx:id="backB" layoutX="26.0" layoutY="29.0" mnemonicParsing="false" onAction="#back" stylesheets="@../../css/button.css" text="Back" />
+      <Label fx:id="TypeEvent" layoutX="472.0" layoutY="117.0" text="Type Event" textFill="#e11818" />
+      <Label fx:id="venue" layoutX="472.0" layoutY="157.0" text="Venue" textFill="#e41717" />
+      <ComboBox fx:id="TypeECB" layoutX="553.0" layoutY="113.0" prefWidth="150.0" promptText="Type Event" stylesheets="@../../css/button.css" />
+      <ComboBox fx:id="venueCB" layoutX="560.0" layoutY="153.0" prefWidth="150.0" promptText="Venue" stylesheets="@../../css/button.css" />
+      <Label layoutX="344.0" layoutY="41.0" text="Add Event" textFill="#ee1818">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="updateEvent" layoutX="499.0" layoutY="375.0" mnemonicParsing="false" onAction="#updateEvent" stylesheets="@../../css/button.css" text="Update Event" />
+      <Button fx:id="updateEvent" layoutX="323.0" layoutY="437.0" mnemonicParsing="false" onAction="#updateEventFromTable" stylesheets="@../../css/button.css" text="Update selected event" />
+      <Button fx:id="deleteEvent" layoutX="46.0" layoutY="437.0" mnemonicParsing="false" onAction="#deleteEvent" stylesheets="@../../css/button.css" text="Delete selected event" />
+      <TableView layoutX="10.0" layoutY="105.0" prefHeight="294.0" prefWidth="457.0" stylesheets="@../../css/button.css">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="66.0" text="Venue" />
+            <TableColumn prefWidth="84.0" text="Type Event" />
+            <TableColumn prefWidth="111.0" text="number Of Reservation" />
+        </columns>
+      </TableView>
+      <Button fx:id="addTypeEvent" layoutX="726.0" layoutY="113.0" mnemonicParsing="false" onAction="#addTypeEvent" stylesheets="@../../css/button.css" text="add" />
+      <Button fx:id="addVenue" layoutX="724.0" layoutY="153.0" mnemonicParsing="false" onAction="#addVenue" prefHeight="25.0" prefWidth="41.0" stylesheets="@../../css/button.css" text="add" />
+      <Label layoutX="472.0" layoutY="193.0" prefHeight="33.0" prefWidth="71.0" text="Event Name:" textAlignment="CENTER" textFill="#e41717" />
+      <TextField layoutX="560.0" layoutY="197.0" prefHeight="25.0" prefWidth="136.0" stylesheets="@../../css/button.css" />
+      <Label layoutX="474.0" layoutY="240.0" prefHeight="26.0" prefWidth="65.0" text="Owner:" textAlignment="CENTER" textFill="#e41717" />
+      <TextField fx:id="ownerEvent" layoutX="561.0" layoutY="241.0" stylesheets="@../../css/button.css" />
+      <Button fx:id="addOwner" layoutX="716.0" layoutY="279.0" mnemonicParsing="false" onAction="#addOwner" stylesheets="@../../css/button.css" text="Add" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="474.0" layoutY="287.0" text="Date: " textAlignment="JUSTIFY" textFill="#e41717" />
+      <DatePicker id="dateEvent" fx:id="dateEvent" layoutX="556.0" layoutY="283.0" prefHeight="25.0" prefWidth="145.0" stylesheets="@../../css/button.css" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="473.0" layoutY="330.0" text=" Number of Reservation: " textAlignment="JUSTIFY" textFill="#e41717" />
+      <TextField id="numberOfReservation" fx:id="numberOfReservation" layoutX="609.0" layoutY="320.0" prefHeight="25.0" prefWidth="38.0" stylesheets="@../../css/button.css" />
+   </children>
+</AnchorPane>
